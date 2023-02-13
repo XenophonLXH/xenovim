@@ -58,6 +58,10 @@ return require('packer').startup(function(use)
     {'rafamadriz/friendly-snippets'}, -- Optional
   }
 
-}
+ }
+
+ -- Terminal: ToggleTerm
+ use { "akinsho/toggleterm.nvim" }
+ 
 end)
 

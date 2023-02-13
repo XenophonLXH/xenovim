@@ -15,3 +15,6 @@ keymap("n", "<C-o>", ":Neotree toggle left reveal_force_cwd<cr>", default_opts) 
 keymap("n", "<C-Shift-o>", ":Neotree close <cr>", default_opts) -- close tree
 keymap("n", "<C-g>", ":Neotree toggle float git_status<cr>", default_opts) -- Show git status float
 
+
+-- ToggleTerm
+keymap("n", "<C-t>", ":ToggleTerm size=5 direction=float<cr>", default_opts)
