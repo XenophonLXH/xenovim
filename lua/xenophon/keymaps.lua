@@ -5,6 +5,7 @@
 -- Leader:    <space>
 ----------  -----------
 vim.g.mapleader = " "
+local map = vim.api.nvim_set_keymap
 
 
 --- Vim
@@ -19,4 +20,9 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) -- Search Buffers
 vim.keymap.set('n', '<leader>ht', builtin.help_tags, {}) -- Find Help
 vim.keymap.set('n', '<leader>gf', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ")})
+
+
+--- NeoTree
+
+-- Testing Something
 end)
