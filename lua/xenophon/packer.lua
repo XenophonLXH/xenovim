@@ -62,6 +62,9 @@ return require('packer').startup(function(use)
 
  -- Terminal: ToggleTerm
  use { "akinsho/toggleterm.nvim" }
+
+ -- Time Tracking: Wakatime
+ use { "wakatime/vim-wakatime" }
  
 end)
 

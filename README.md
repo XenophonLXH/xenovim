@@ -10,4 +10,5 @@ Feel free to clone/fork the repo and make it your own.
 * Neo Tree: https://github.com/nvim-neo-tree/neo-tree.nvim
 * Packer: https://github.com/wbthomason/packer.nvim
 * ToggleTerm: https://github.com/akinsho/toggleterm.nvim
+* Wakatime: https://github.com/wakatime/vim-wakatime
 
