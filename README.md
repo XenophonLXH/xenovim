@@ -12,3 +12,13 @@ Feel free to clone/fork the repo and make it your own.
 * ToggleTerm: https://github.com/akinsho/toggleterm.nvim
 * Wakatime: https://github.com/wakatime/vim-wakatime
 
+
+### NeoTree
+Tree viewer/manager for Neovim
+
+
+### ToggleTerm
+Toggle terminal in NVIM. Currently set to *float*
+
+### Wakatime
+Track your development time.
