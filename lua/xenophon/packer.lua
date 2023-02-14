@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
 
   -- Theme: Sonokai
   use "sainnhe/sonokai"
+
   -- Theme: TreeSitter
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use( 'nvim-treesitter/playground' )
@@ -65,6 +66,9 @@ return require('packer').startup(function(use)
 
  -- Time Tracking: Wakatime
  use { "wakatime/vim-wakatime" }
+
+ -- Window Management: Smart Splits
+ use { "mrjones2014/smart-splits.nvim" }
  
 end)
 

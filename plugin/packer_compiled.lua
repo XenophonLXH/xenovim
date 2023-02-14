@@ -174,6 +174,11 @@ _G.packer_plugins = {
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["smart-splits.nvim"] = {
+    loaded = true,
+    path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
+    url = "https://github.com/mrjones2014/smart-splits.nvim"
+  },
   sonokai = {
     loaded = true,
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/sonokai",
