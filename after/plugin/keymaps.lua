@@ -12,7 +12,8 @@ keymap("n", "<Down>", ":resize +1<CR>", default_opts)
 
 -- Neotree
 keymap("n", "<C-o>", ":Neotree left reveal_force_cwd<cr>", default_opts) -- focus tree and reveal current file
-keymap("n", "<C-e>", ":Neotree toggle<cr>", default_opts) -- close tree keymap("n", "<C-g>", ":Neotree toggle float git_status<cr>", default_opts) -- Show git status float
+keymap("n", "<C-e>", ":Neotree toggle<cr>", default_opts) -- close tree 
+keymap("n", "<C-g>", ":Neotree toggle float git_status<cr>", default_opts) -- Show git status float
 
 
 -- ToggleTerm
