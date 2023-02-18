@@ -69,6 +69,9 @@ return require('packer').startup(function(use)
 
  -- Window Management: Smart Splits
  use { "mrjones2014/smart-splits.nvim" }
+
+ -- Code Commenting: commentary.nvim
+ use { "tpope/vim-commentary" }
  
 end)
 

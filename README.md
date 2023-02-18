@@ -12,15 +12,23 @@ Feel free to clone/fork the repo and make it your own.
 * ToggleTerm: https://github.com/akinsho/toggleterm.nvim
 * Wakatime: https://github.com/wakatime/vim-wakatime
 * Smart Splitter: https://github.com/mrjones2014/smart-splits.nvim
+* Vim-Commentary: https://github.com/tpope/vim-commentary
 
-### NeoTree
+## NeoTree
 Tree viewer/manager for Neovim
 
-### ToggleTerm
+## ToggleTerm
 Toggle terminal in NVIM. Currently set to *float*
 
-### Wakatime
+## Wakatime
 Track your development time
 
-### SmartSplitter
+## SmartSplitter
 Easily manager multiple windows
+
+## Vim-Commentary
+Easily comment out any you like:
+
+### Key-binding:
+1. `gcc` : Comment out a line
+2. `gc` : Comment out the target of a motion
