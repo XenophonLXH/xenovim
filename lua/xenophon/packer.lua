@@ -26,8 +26,9 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- Theme: Sonokai
-  use "sainnhe/sonokai"
+
+  -- Theme: Catppuccin
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Theme: TreeSitter
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
