@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -179,11 +184,6 @@ _G.packer_plugins = {
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
     url = "https://github.com/mrjones2014/smart-splits.nvim"
   },
-  sonokai = {
-    loaded = true,
-    path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/sonokai",
-    url = "https://github.com/sainnhe/sonokai"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -193,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-wakatime"] = {
     loaded = true,
