@@ -27,3 +27,4 @@ keymap("n", "<C-q>", "<cmd>q<cr><cr>", default_opts)
 keymap("n", "<leader>qq", "<cmd>q<cr><cr>", default_opts)
 keymap("n", "|", "<cmd>vsplit<cr>", default_opts)
 keymap("n", "\\", "<cmd>split<cr>", default_opts)
+

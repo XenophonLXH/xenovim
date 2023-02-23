@@ -28,3 +28,5 @@ vim.opt.isfname:append("@-@")
 -- Load Speed
 vim.opt.updatetime = 50
 
+-- Bufferlne settings
+vim.opt.laststatus = 3
