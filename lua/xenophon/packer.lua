@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
   use {
   "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
-    requires = { 
+    requires = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
@@ -25,7 +25,6 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
 
   -- Theme: Catppuccin
   use { "catppuccin/nvim", as = "catppuccin" }
@@ -73,6 +72,12 @@ return require('packer').startup(function(use)
 
  -- Code Commenting: commentary.nvim
  use { "tpope/vim-commentary" }
- 
+
+ -- UI: Lualine
+ use { "nvim-lualine/lualine.nvim",
+     requires = {
+         "kyazdani42/nvim-web-devicons", opt = true
+     }
+ }
 end)
 

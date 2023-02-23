@@ -1,8 +1,10 @@
 require("xenophon.packer")
 require("xenophon.keymaps")
+require("xenophon.lualine")
 require("xenophon.theme")
 require("xenophon.settings")
 require("xenophon.neotree")
 require("xenophon.toggleterm")
 require("xenophon.harpoon")
 require("xenophon.smartsplitter")
+
