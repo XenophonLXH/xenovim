@@ -27,7 +27,7 @@ end)
 --- Smart Splitter
 local smartsplits = require('smart-splits')
 vim.keymap.set('n', '<A-h>', function() require("smart-splits").move_cursor_left() end, { desc = 'Move to left' })
-vim.keymap.set('n', '<A-j>', function() require("smart-splits").move_cursor_down() end, { desc = 'Move to down' })
-vim.keymap.set('n', '<A-k>', function() require("smart-splits").move_cursor_up() end, { desc = 'Move to up' })
+-- vim.keymap.set('n', '<A-j>', function() require("smart-splits").move_cursor_down() end, { desc = 'Move to down' })
+-- vim.keymap.set('n', '<A-k>', function() require("smart-splits").move_cursor_up() end, { desc = 'Move to up' })
 vim.keymap.set('n', '<A-l>', function() require("smart-splits").move_cursor_right() end, { desc = 'Move to right' })
 

@@ -14,19 +14,19 @@ vim.opt.wrap = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
-
 -- GUI Colors
 vim.opt.termguicolors = true
-
 
 -- Misc
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
-
 -- Load Speed
 vim.opt.updatetime = 50
 
 -- Bufferlne settings
 vim.opt.laststatus = 3
+
+-- Notifications
+vim.notify = require("notify")
