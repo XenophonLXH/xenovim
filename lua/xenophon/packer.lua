@@ -93,5 +93,10 @@ return require('packer').startup(function(use)
     end
   }
 
+ -- Code: indent-blankline.nvim
+    use {
+        "lukas-reineke/indent-blankline.nvim"
+    }
+
 end)
 
