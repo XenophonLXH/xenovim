@@ -22,16 +22,11 @@ keymap("n", "<S-l>", "<cmd>bnext<cr>", default_opts)
 keymap("n", "<S-h>", "<cmd>bprevious<cr>", default_opts)
 
 -- File Operations
+keymap("n", "<C-s>", "<cmd>w<cr><cr>", default_opts)
 keymap("n", "<C-q>", "<cmd>q<cr><cr>", default_opts)
 keymap("n", "<leader>qq", "<cmd>q<cr><cr>", default_opts)
 keymap("n", "|", "<cmd>vsplit<cr>", default_opts)
 -- keymap("n", "\\", "<cmd>split<cr>", default_opts)
-
--- Save file and notify
-vim.keymap.set('n', '<C-s>', function()
-    vim.cmd("w")
-    vim.notify("File Saved", "warn")
-end, default_opts)
 
 -- Move lines up or down
 keymap("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)

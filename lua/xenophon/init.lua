@@ -10,4 +10,4 @@ require("xenophon.indent")
 require("xenophon.lualine")
 require("xenophon.mini")
 require("xenophon.notify")
-
+require("xenophon.noice")
