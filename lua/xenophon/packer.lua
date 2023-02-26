@@ -98,5 +98,9 @@ return require('packer').startup(function(use)
         "lukas-reineke/indent-blankline.nvim"
     }
 
+ -- Code: Indent Animations
+    use 'echasnovski/mini.indentscope'
+    use 'echasnovski/mini.nvim'
+
 end)
 
