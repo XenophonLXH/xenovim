@@ -32,3 +32,4 @@ keymap("n", "|", "<cmd>vsplit<cr>", default_opts)
 -- Move lines up or down
 keymap("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
 keymap("n", "<A-k>", "<cmd>m .-2<CR>", default_opts)
+

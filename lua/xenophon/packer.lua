@@ -112,5 +112,8 @@ use({
     }
 })
 
+-- VIMBEGOOD
+use { "ThePrimeagen/vim-be-good" }
+
 end)
 
