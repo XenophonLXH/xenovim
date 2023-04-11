@@ -84,11 +84,11 @@ return require('packer').startup(function(use)
    use {
     'rcarriga/nvim-notify',
     config = function ()
-      require("notify").setup {
+      require("notify").setup({
         stages = 'fade_in_slide_out',
-        background_colour = 'FloatShadow',
+        background_colour = '#000000',
         timeout = 3000,
-      }
+      })
       vim.notify = require('notify')
     end
   }

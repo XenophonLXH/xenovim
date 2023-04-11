@@ -45,7 +45,7 @@ require('smart-splits').setup({
     'WinEnter',
   },
   -- enable or disable the tmux integration
-  tmux_integration = true,
+  -- tmux_integration = true,
   -- disable tmux navigation if current tmux pane is zoomed
-  disable_tmux_nav_when_zoomed = true,
+  -- disable_tmux_nav_when_zoomed = true,
 })
