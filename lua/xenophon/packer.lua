@@ -115,5 +115,8 @@ use({
 -- VIMBEGOOD
 use { "ThePrimeagen/vim-be-good" }
 
+-- Leap
+use { "ggandor/leap.nvim" }
+
 end)
 

@@ -1,6 +1,7 @@
 require("xenophon.packer")
 require("xenophon.keymaps")
 require("xenophon.theme")
+require("xenophon.leap")
 require("xenophon.settings")
 require("xenophon.neotree")
 require("xenophon.toggleterm")
