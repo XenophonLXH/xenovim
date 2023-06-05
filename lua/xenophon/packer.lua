@@ -118,5 +118,9 @@ use { "ThePrimeagen/vim-be-good" }
 -- Leap
 use { "ggandor/leap.nvim" }
 
+-- CSS Colour
+use { "norcalli/nvim-colorizer.lua" }
+-- use { "ap/vim-css-color" }
+
 end)
 

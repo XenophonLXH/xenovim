@@ -6,14 +6,36 @@ Xenophon's version of Neovim and it's wonderful plugins.
 Feel free to clone/fork the repo and make it your own.
 
 # Plugins used
-* Tree Sitter: https://github.com/tree-sitter/tree-sitter
-* Neo Tree: https://github.com/nvim-neo-tree/neo-tree.nvim
+### Package Manager
 * Packer: https://github.com/wbthomason/packer.nvim
+### UI
+* Catpuccin: https://github.com/catppuccin/nvim
+* Lualine: https://github.com/nvim-lualine/lualine.nvim
+* Notify: https://github.com/rcarriga/nvim-notify
+* Noice: https://github.com/folke/noice.nvim
+* Colorizer: https://github.com/ggandor/leap.nvim
+### Navigation
+* Harpoon: https://github.com/ThePrimeagen/harpoon
+* Leap: https://github.com/ggandor/leap.nvim
+### Searching
+* Telescope: https://github.com/nvim-telescope/telescope.nvim
+### File Manager
+* Neo Tree: https://github.com/nvim-neo-tree/neo-tree.nvim
+### Terminal
 * ToggleTerm: https://github.com/akinsho/toggleterm.nvim
+### Tools
+* Tree Sitter: https://github.com/tree-sitter/tree-sitter
 * Wakatime: https://github.com/wakatime/vim-wakatime
 * Smart Splitter: https://github.com/mrjones2014/smart-splits.nvim
 * Vim-Commentary: https://github.com/tpope/Vim-Commentary
-* Telescope: https://github.com/nvim-telescope/telescope.nvim
+* Snippets: https://github.com/L3MON4D3/LuaSnip
+* Indent-Blankline: https://github.com/lukas-reineke/indent-blankline.nvim
+* Mini-Nvim: https://github.com/echasnovski/mini.nvim
+* VimBeGood: https://github.com/ThePrimeagen/vim-be-good
+### Git
+* LazyGit: https://github.com/jesseduffield/lazygit
+### LSP
+* LSP-Zero: https://github.com/VonHeikemen/lsp-zero.nvim
 
 # Configuration
 ## Base configuration
