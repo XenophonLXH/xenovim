@@ -90,7 +90,7 @@ return require('packer').startup(function(use)
         timeout = 3000,
       })
       vim.notify = require('notify')
-    end
+    end,
   }
 
  -- Code: indent-blankline.nvim
@@ -122,5 +122,12 @@ use { "ggandor/leap.nvim" }
 use { "norcalli/nvim-colorizer.lua" }
 -- use { "ap/vim-css-color" }
 
+-- Motion F/f T/tag
+use { "ggandor/flit.nvim",
+    requires = {
+        { "ggandor/leap.nvim" },
+        { "tpope/vim-repeat" }
+    }
+}
 end)
 

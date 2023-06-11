@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["flit.nvim"] = {
+    loaded = true,
+    path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/flit.nvim",
+    url = "https://github.com/ggandor/flit.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -244,6 +249,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
   ["vim-wakatime"] = {
     loaded = true,
