@@ -1,4 +1,5 @@
 require("xenophon.packer")
+require("xenophon.blamer")
 require("xenophon.telescope")
 require("xenophon.keymaps")
 require("xenophon.theme")

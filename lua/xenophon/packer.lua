@@ -129,5 +129,9 @@ use { "ggandor/flit.nvim",
         { "tpope/vim-repeat" }
     }
 }
+
+-- Git Blame
+use "APZelos/blamer.nvim"
+
 end)
 
