@@ -134,5 +134,8 @@ use { "ggandor/flit.nvim",
 -- Git Blame
 use "APZelos/blamer.nvim"
 
+-- Coc
+use "neoclide/coc.nvim"
+
 end)
 
