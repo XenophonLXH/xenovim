@@ -30,3 +30,6 @@ vim.opt.laststatus = 3
 
 -- Notifications
 vim.notify = require("notify")
+
+-- Shared clipboard accross instances and system
+vim.opt.clipboard = "unnamedplus"

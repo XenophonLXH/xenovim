@@ -19,6 +19,7 @@ vim.keymap.set('n', '<leader>lg', builtin.live_grep, {}) -- Search Grep
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) -- Search Buffers
 vim.keymap.set('n', '<leader>ht', builtin.help_tags, {}) -- Find Help
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, {}) -- Grep String
+vim.keymap.set('n', '<leader>gd', builtin.lsp_definitions, {}) -- Go to definition
 vim.keymap.set('n', '<leader>gf', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ")})
 end)
