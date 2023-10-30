@@ -99,7 +99,10 @@ return require('packer').startup(function(use)
 
  -- Code: indent-blankline.nvim
     use {
-        "lukas-reineke/indent-blankline.nvim"
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {
+        }
     }
 
  -- Code: Indent Animations

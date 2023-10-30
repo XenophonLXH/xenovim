@@ -24,7 +24,15 @@
 vim.opt.list = true
 -- vim.opt.listchars:append "space:⋅" -- Enable if you want space indicators
 
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
+local highlight = {
+    "CursorColumn",
+    "Whitespace",
+}
+require("ibl").setup {
+    indent = { char = " " },
+    whitespace = {
+        -- highlight = highlight,
+        remove_blankline_trail = false,
+    },
+    scope = { enabled = false },
 }
