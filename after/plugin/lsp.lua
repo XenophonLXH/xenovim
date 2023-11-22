@@ -1,7 +1,6 @@
 local lsp = require("lsp-zero")
-
+vim.lsp.set_log_level "debug"
 lsp.preset("recommended")
-
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
@@ -9,31 +8,18 @@ lsp.ensure_installed({
   'luau_lsp',
 })
 
--- lsp.configure('python-language-server', {
---     settings = {
---         -- configure plugins in pylsp
---         pylsp = {
---           plugins = {
---             pyflakes = {enabled = false},
---             mccabe = {enabled = false},
---             pylint = {enabled = false},
---           },
---         },
---       },
--- })
-
--- lsp.configure('pylsp', {
---     settings = {
---         -- configure plugins in pylsp
---         pylsp = {
---           plugins = {
---             pyflakes = {enabled = false},
---             mccabe = {enabled = false},
---             pylint = {enabled = false},
---           },
---         },
---       },
--- })
+lsp.configure('pylsp', {
+    settings = {
+        -- configure plugins in pylsp
+        pylsp = {
+          plugins = {
+            pyflakes = {enabled = true},
+            mccabe = {enabled = true},
+            pylint = {enabled = false},
+          },
+        },
+      },
+})
 
 -- Fix Undefined global 'vim'
 lsp.configure('lua-language-server', {

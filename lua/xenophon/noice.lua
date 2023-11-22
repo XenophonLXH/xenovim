@@ -1,1 +1,2 @@
-require("noice").setup({})
+require("noice").setup({
+})

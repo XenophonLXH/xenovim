@@ -16,6 +16,14 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Mason
+  use {
+      "williamboman/mason.nvim",
+      opts = {
+          "debugpy",
+      }
+  }
+
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -116,7 +124,12 @@ use({
   requires = {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
-    }
+  },
+  config = {
+      lsp = {
+          hover = false
+      }
+  }
 })
 
 -- VIMBEGOOD
@@ -143,5 +156,18 @@ use "APZelos/blamer.nvim"
 -- Coc
 use "neoclide/coc.nvim"
 
+-- dap
+use { "mfussenegger/nvim-dap-python",
+    requires = {
+        { "mfussenegger/nvim-dap" },
+        { "rcarriga/nvim-dap-ui" },
+    }
+}
+
+use { "rcarriga/nvim-dap-ui",
+    requires = {
+        { "mfussenegger/nvim-dap" },
+    }
+}
 end)
 

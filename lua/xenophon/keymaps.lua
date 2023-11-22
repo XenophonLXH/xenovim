@@ -37,3 +37,13 @@ vim.keymap.set('n', '<A-l>', function() require("smart-splits").move_cursor_righ
 -- Remap Page Up/Down
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+
+-- Debug
+vim.keymap.set("n", "<F2>", "<cmd> DapToggleBreakpoint <CR>")
+vim.keymap.set("n", "<F3>", "<cmd> lua require('dap').terminate() <CR>")
+vim.keymap.set("n", "<F4>", "<cmd> lua require('dap').restart() <CR>")
+vim.keymap.set("n", "<F5>", "<cmd> lua _G.Runner() <CR>")
+vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
+vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
+vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
