@@ -235,7 +235,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-notify"] = {
-    config = { "\27LJ\2\n‘\1\0\0\4\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0006\1\0\0'\3\1\0B\1\2\2=\1\1\0K\0\1\0\bvim\1\0\3\vstages\22fade_in_slide_out\ftimeout\3¸\23\22background_colour\f#000000\nsetup\vnotify\frequire\0" },
+    config = { "\27LJ\2\n‘\1\0\0\4\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0006\1\0\0'\3\1\0B\1\2\2=\1\1\0K\0\1\0\bvim\1\0\3\vstages\22fade_in_slide_out\22background_colour\f#000000\ftimeout\3¸\23\nsetup\vnotify\frequire\0" },
     loaded = true,
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
@@ -249,6 +249,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["obsidian.nvim"] = {
+    config = { "\27LJ\2\nÅ\1\0\1\r\0\n\0\"'\1\0\0\n\0\0\0X\2\15€\18\4\0\0009\2\1\0'\5\2\0'\6\3\0B\2\4\2\18\4\2\0009\2\1\2'\5\4\0'\6\0\0B\2\4\2\18\4\2\0009\2\5\2B\2\2\2\18\1\2\0X\2\15€)\2\1\0)\3\4\0)\4\1\0M\2\v€\18\6\1\0006\a\6\0009\a\a\a6\t\b\0009\t\t\t)\vA\0)\fZ\0B\t\3\0A\a\0\2&\1\a\6O\2õ\127L\1\2\0\vrandom\tmath\tchar\vstring\nlower\18[^A-Za-z0-9-]\6-\6 \tgsub\5Ë\2\1\0\6\0\f\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0004\3\3\0005\4\3\0005\5\4\0=\5\5\4>\4\1\0035\4\6\0005\5\a\0=\5\5\4>\4\2\3=\3\t\0023\3\n\0=\3\v\2B\0\2\1K\0\1\0\17note_id_func\0\15workspaces\1\0\0\1\0\1\17notes_subdir\nnotes\1\0\2\tname\rpersonal\tpath5/home/xenophon/Documents/Personal/ObsidianVault/\14overrides\1\0\1\17notes_subdir\nnotes\1\0\2\tname\twork\tpath:/home/xenophon/Documents/Work/ObsidianVault/TaskFlow/\nsetup\robsidian\frequire\0" },
+    loaded = true,
+    path = "/home/xenophon/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -315,8 +321,12 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: nvim-notify
 time([[Config for nvim-notify]], true)
-try_loadstring("\27LJ\2\n‘\1\0\0\4\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0006\1\0\0'\3\1\0B\1\2\2=\1\1\0K\0\1\0\bvim\1\0\3\vstages\22fade_in_slide_out\ftimeout\3¸\23\22background_colour\f#000000\nsetup\vnotify\frequire\0", "config", "nvim-notify")
+try_loadstring("\27LJ\2\n‘\1\0\0\4\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0006\1\0\0'\3\1\0B\1\2\2=\1\1\0K\0\1\0\bvim\1\0\3\vstages\22fade_in_slide_out\22background_colour\f#000000\ftimeout\3¸\23\nsetup\vnotify\frequire\0", "config", "nvim-notify")
 time([[Config for nvim-notify]], false)
+-- Config for: obsidian.nvim
+time([[Config for obsidian.nvim]], true)
+try_loadstring("\27LJ\2\nÅ\1\0\1\r\0\n\0\"'\1\0\0\n\0\0\0X\2\15€\18\4\0\0009\2\1\0'\5\2\0'\6\3\0B\2\4\2\18\4\2\0009\2\1\2'\5\4\0'\6\0\0B\2\4\2\18\4\2\0009\2\5\2B\2\2\2\18\1\2\0X\2\15€)\2\1\0)\3\4\0)\4\1\0M\2\v€\18\6\1\0006\a\6\0009\a\a\a6\t\b\0009\t\t\t)\vA\0)\fZ\0B\t\3\0A\a\0\2&\1\a\6O\2õ\127L\1\2\0\vrandom\tmath\tchar\vstring\nlower\18[^A-Za-z0-9-]\6-\6 \tgsub\5Ë\2\1\0\6\0\f\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0004\3\3\0005\4\3\0005\5\4\0=\5\5\4>\4\1\0035\4\6\0005\5\a\0=\5\5\4>\4\2\3=\3\t\0023\3\n\0=\3\v\2B\0\2\1K\0\1\0\17note_id_func\0\15workspaces\1\0\0\1\0\1\17notes_subdir\nnotes\1\0\2\tname\rpersonal\tpath5/home/xenophon/Documents/Personal/ObsidianVault/\14overrides\1\0\1\17notes_subdir\nnotes\1\0\2\tname\twork\tpath:/home/xenophon/Documents/Work/ObsidianVault/TaskFlow/\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
+time([[Config for obsidian.nvim]], false)
 -- Config for: noice.nvim
 time([[Config for noice.nvim]], true)
 time([[Config for noice.nvim]], false)
