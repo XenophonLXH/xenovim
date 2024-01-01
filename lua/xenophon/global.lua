@@ -50,6 +50,7 @@ function _G.OdooRunner()
         function(config)
             args_list = {arg_database, arg_update, table.unpack(config.args)}
             config.args = args_list
+            dap.adapters.python.command = config.pythonPath
             print("Using database: "..arg_database)
             print("Using updates: "..arg_update)
             dap.run(config)
