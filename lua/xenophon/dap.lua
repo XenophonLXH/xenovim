@@ -1,4 +1,5 @@
 local dap = require("dap")
+vim.g.dap_open_float = false;
 -- local ENV = os.getenv("VIRTUAL_ENV")
 -- local function isempty(s)
 --     return s == nil or s == ''

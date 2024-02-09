@@ -1,4 +1,6 @@
 local dap = require('dap')
+local arg_database = ''
+local arg_update = ''
 
 -- Runner
 function _G.Runner()
@@ -36,8 +38,8 @@ function _G.OdooRunner()
     local database = vim.fn.input("Database: ", '')
     local update = vim.fn.input("Modules: ", 'all')
 
-    local arg_database = "--db-filter="..database
-    local arg_update = "--update="..update
+    arg_database = "--db-filter="..database
+    arg_update = "--update="..update
 
     vim.ui.select(
         configs,

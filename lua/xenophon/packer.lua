@@ -154,7 +154,7 @@ use { "ggandor/flit.nvim",
 use "APZelos/blamer.nvim"
 
 -- Coc
-use "neoclide/coc.nvim"
+-- use "neoclide/coc.nvim"
 
 -- dap
 use { "mfussenegger/nvim-dap-python",
@@ -219,5 +219,8 @@ use({
     })
   end
 })
-end)
 
+-- Yuck (Used for Eww Widgets)
+use { "elkowar/yuck.vim" }
+
+end)

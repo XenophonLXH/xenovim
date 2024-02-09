@@ -28,7 +28,8 @@ keymap("n", "<C-s>", "<cmd>w<cr><cr>", default_opts)
 keymap("n", "<C-q>", "<cmd>q<cr><cr>", default_opts)
 keymap("n", "<leader>qq", "<cmd>q<cr><cr>", default_opts)
 keymap("n", "|", "<cmd>vsplit<cr>", default_opts)
--- keymap("n", "\\", "<cmd>split<cr>", default_opts)
+keymap("n", "\\", "<cmd>split<cr>", default_opts)
+keymap("n", "<leader>bc", "<cmd>bdelete<cr><cr>", default_opts)
 
 -- Move lines up or down
 keymap("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
