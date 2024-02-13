@@ -20,81 +20,84 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
 -- })
 -- vim.cmd.colorscheme "catppuccin"
 
-
-
--- Configure Kanagawa
--- require('kanagawa').setup({
---     compile = false,             -- enable compiling the colorscheme
---     undercurl = true,            -- enable undercurls
---     commentStyle = { italic = true },
---     functionStyle = {},
---     keywordStyle = { italic = true},
---     statementStyle = { bold = true },
---     typeStyle = {},
---     transparent = true,         -- do not set background color
---     dimInactive = true,         -- dim inactive window `:h hl-NormalNC`
---     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
---     colors = {                   -- add/modify theme and palette colors
---         palette = {},
---         theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
---     },
---     overrides = function(colors) -- add/modify highlights
---         return {}
---     end,
---     theme = "wave",              -- Load "wave" theme when 'background' option is not set
---     background = {               -- map the value of 'background' option to a theme
---         dark = "wave",           -- options: wave,dragon,lotus
---         light = "lotus"
---     },
--- })
-
--- Kanagawa
--- overrides = function(colors)
---     local theme = colors.theme
---     return {
---         TelescopeTitle = { fg = theme.ui.special, bold = true },
---         TelescopePromptNormal = { bg = theme.ui.bg_p1 },
---         TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
---         TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
---         TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
---         TelescopePreviewNormal = { bg = theme.ui.bg_dim },
---         TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
---     }
--- end,
-
-
--- Kanagawa
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     pattern = "kanagawa",
---     callback = function()
---         if vim.o.background == "light" then
---             vim.fn.system("kitty +kitten themes Kanagawa_light")
---         elseif vim.o.background == "dark" then
---             vim.fn.system("kitty +kitten themes Kanagawa_dragon")
---         else
---             vim.fn.system("kitty +kitten themes Kanagawa")
---         end
---     end,
--- })
-
 -- Gruvbox
 -- vim.g.gruvbox_material_better_performance = 1
--- vim.g.gruvbox_material_background = "hard"
--- vim.g.gruvbox_material_foreground = "material"
+-- vim.g.gruvbox_material_foreground = "hard"
 -- vim.g.gruvbox_material_enable_bold = 1
+-- vim.g.gruvbox_material_transparent_background = 1
 -- vim.g.gruvbox_material_dim_inactive_windows = 1
+-- vim.cmd.colorscheme "gruvbox-material"
 
 -- Moonfly:
 -- vim.g.moonflyTransparent = true
--- vim.g.moonflyTerminalColors = false
+-- vim.g.moonflyTerminalColors = true
 -- vim.o.background = "dark"
-
+-- vim.cmd.colorscheme "moonfly"
+-- vim.g.moonflyItalics = false
+-- vim.g.moonflyCursorColor = true
+-- vim.g.moonflyUnderlineMatchParen = true
+-- vim.g.lightline = {colorscheme="moonfly"}
+-- vim.g.moonflyVirtualTextColor = true
 
 -- Sonokai
-vim.g.sonokai_style = 'andromeda'
-vim.g.sonokai_better_performance = 1
-vim.g.sonokai_transparent_background = 2
-vim.g.sonokai_dim_inactive_windows = 1
-vim.g.sonoaki_menu_selection_background = 'red'
+-- vim.g.sonokai_style = 'andromeda'
+-- vim.g.sonokai_better_performance = 1
+-- vim.g.sonokai_transparent_background = 2
+-- vim.g.sonokai_dim_inactive_windows = 1
+-- vim.g.sonoaki_menu_selection_background = 'red'
+-- vim.cmd.colorscheme "sonokai"
 
-vim.cmd.colorscheme "sonokai"
+-- Midnight
+-- vim.cmd.colorscheme "midnight"
+-- require('midnight').setup {
+--     HighlightGroup = {
+--         clear = true
+--     },
+-- }
+--
+
+-- Bamboo
+-- Lua
+require('bamboo').setup {
+  -- Main options --
+  -- NOTE: to use the light theme, set `vim.o.background = 'light'`
+  style = 'vulgaris', -- Choose between 'vulgaris' (regular), 'multiplex' (greener), and 'light'
+  toggle_style_key = nil, -- Keybind to toggle theme style. Leave it nil to disable it, or set it to a string, e.g. "<leader>ts"
+  toggle_style_list = { 'vulgaris', 'multiplex', 'light' }, -- List of styles to toggle between
+  transparent = true, -- Show/hide background
+  dim_inactive = false, -- Dim inactive windows/buffers
+  term_colors = true, -- Change terminal color as per the selected theme style
+  ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+  cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
+
+  -- Change code style ---
+  -- Options are italic, bold, underline, none
+  -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
+  code_style = {
+    comments = 'italic',
+    conditionals = 'italic',
+    keywords = 'none',
+    functions = 'bold',
+    namespaces = 'italic',
+    parameters = 'italic',
+    strings = 'none',
+    variables = 'none',
+  },
+
+  -- Lualine options --
+  lualine = {
+    transparent = true, -- lualine center bar transparency
+  },
+
+  -- Custom Highlights --
+  colors = {}, -- Override default colors
+  highlights = {}, -- Override highlight groups
+
+  -- Plugins Config --
+  diagnostics = {
+    darker = false, -- darker colors for diagnostic
+    undercurl = true, -- use undercurl instead of underline for diagnostics
+    background = true, -- use background color for virtual text
+  },
+}
+vim.cmd.colorscheme "bamboo"

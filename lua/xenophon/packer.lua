@@ -36,10 +36,11 @@ return require('packer').startup(function(use)
 
   -- Theme: Catppuccin
   use { "catppuccin/nvim", as = "catppuccin" }
-  use { "rebelot/kanagawa.nvim" }
   use { "sainnhe/gruvbox-material" }
   use { "bluz71/vim-moonfly-colors" }
   use { "sainnhe/sonokai" }
+  use { "dasupradyumna/midnight.nvim" }
+  use { "ribru17/bamboo.nvim" }
 
   -- Theme: TreeSitter
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
