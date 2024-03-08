@@ -4,7 +4,7 @@ require("toggleterm").setup({
     float_opts = {
         width = 180,
         height = 100,
-        winblend = 1, -- 0 = Same as IDE, 100 = uglya as fuck
+        winblend = 5,
         border = 'curved',
     },
 })
