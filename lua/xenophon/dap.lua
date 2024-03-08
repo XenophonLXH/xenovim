@@ -72,10 +72,10 @@ dap.configurations.python = {
     pythonPath = "/home/xenophon/Development/TaskFlow/venv/odoo-12/bin/python3",
     args = {
             '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-12.conf',
-            '--limit-time-real=10000000',
             '--test-enable',
             '--log-level=test',
-    }, -- Adjust arguments as needed
+            '--limit-time-real=10000000',
+    },
     cwd = '${workspaceFolder}',
     console = "internalConsole",
   },

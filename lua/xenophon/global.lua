@@ -50,8 +50,10 @@ function _G.OdooRunner()
             end
         },
         function(config)
-            args_list = {table.unpack(config.args), arg_database, arg_update}
-            config.args = args_list
+            local copy_args = config.args
+            table.insert(copy_args, arg_database)
+            table.insert(copy_args, arg_update)
+            config.args = copy_args
             dap.adapters.python.command = config.pythonPath
             print("Using database: "..arg_database)
             print("Using updates: "..arg_update)

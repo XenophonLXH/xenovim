@@ -20,4 +20,6 @@ require("xenophon.dap_ui")
 require("xenophon.dap")
 require("xenophon.global")
 require("xenophon.obsidian")
+require("xenophon.bufferline")
 -- require("xenophon.coc")
+

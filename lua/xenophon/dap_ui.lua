@@ -33,6 +33,9 @@ dapui.setup({
       }
     },
     force_buffers = true,
+    select_window = function()
+        return 1;
+    end,
     icons = {
       collapsed = "",
       current_frame = "",
