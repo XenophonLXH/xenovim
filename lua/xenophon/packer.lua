@@ -154,9 +154,6 @@ use { "ggandor/flit.nvim",
 -- Git Blame
 use "APZelos/blamer.nvim"
 
--- Coc
--- use "neoclide/coc.nvim"
-
 -- dap
 use { "mfussenegger/nvim-dap-python",
     requires = {
