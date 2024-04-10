@@ -157,6 +157,7 @@ use "APZelos/blamer.nvim"
 -- dap
 use { "mfussenegger/nvim-dap-python",
     requires = {
+        { "nvim-neotest/nvim-nio" },
         { "mfussenegger/nvim-dap" },
         { "rcarriga/nvim-dap-ui" },
     }
