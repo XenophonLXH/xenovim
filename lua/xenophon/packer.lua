@@ -34,13 +34,8 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- Theme: Catppuccin
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use { "sainnhe/gruvbox-material" }
-  use { "bluz71/vim-moonfly-colors" }
-  use { "sainnhe/sonokai" }
-  use { "dasupradyumna/midnight.nvim" }
-  use { "ribru17/bamboo.nvim" }
+  -- Theme: Monokai Pro
+  use { "loctvl842/monokai-pro.nvim" }
 
   -- Theme: TreeSitter
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
