@@ -28,7 +28,7 @@ require('telescope').setup{
       vertical = {
         anchor = "center",
         height = 0.99,
-        preview_height = 0.8,
+        preview_height = 0.65,
         preview_cutoff = 40,
         prompt_position = "top",
         width = 0.9
