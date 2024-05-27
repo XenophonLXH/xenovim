@@ -1,6 +1,8 @@
 -- Set Color Scheme
 vim.o.termguicolors = true
 
+vim.api.guicursor = "guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor/lCursor,r-cr:hor20,o:hor50"
+
 -- Set Background to Clear
 vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
@@ -24,7 +26,7 @@ require("monokai-pro").setup({
   day_night = {
     enable = true, -- turn off by default
     day_filter = "classic", -- classic | octagon | pro | machine | ristretto | spectrum
-    night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
+    night_filter = "classic", -- classic | octagon | pro | machine | ristretto | spectrum
   },
   inc_search = "background", -- underline | background
   background_clear = {
@@ -50,3 +52,4 @@ require("monokai-pro").setup({
   },})
 -- lua
 vim.cmd([[colorscheme monokai-pro]])
+vim.cmd([[hi Cursor guibg=red]])
