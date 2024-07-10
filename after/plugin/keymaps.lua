@@ -3,8 +3,8 @@ local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
 -- Resizing panes
-keymap("n", "<C-Left>", ":vertical resize +2<CR>", default_opts)
-keymap("n", "<C-Right>", ":vertical resize -2<CR>", default_opts)
+keymap("n", "<C-Left>", ":vertical resize +5<CR>", default_opts)
+keymap("n", "<C-Right>", ":vertical resize -5<CR>", default_opts)
 keymap("n", "<C-Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<C-Down>", ":resize +1<CR>", default_opts)
 

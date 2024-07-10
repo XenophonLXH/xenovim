@@ -1,7 +1,7 @@
 -- Set Color Scheme
 vim.o.termguicolors = true
 
-vim.api.guicursor = "guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor/lCursor,r-cr:hor20,o:hor50"
+-- vim.api.guicursor = "guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor/lCursor,r-cr:hor20,o:hor50"
 
 -- Set Background to Clear
 vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
@@ -53,3 +53,5 @@ require("monokai-pro").setup({
 -- lua
 vim.cmd([[colorscheme monokai-pro]])
 vim.cmd([[hi Cursor guibg=red]])
+vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
+-- vim.api.guicursor = "guicursor=n-v-c:block-Cursor/lCursor"
