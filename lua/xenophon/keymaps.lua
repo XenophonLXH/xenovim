@@ -41,7 +41,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Debug
 vim.keymap.set("n", "<F2>", "<cmd> DapToggleBreakpoint <CR>")
-vim.keymap.set("n", "<F3>", "<cmd> lua require('dap').terminate() <CR>")
+vim.keymap.set("n", "<F8>", "<cmd> lua require('dap').terminate() <CR>")
 vim.keymap.set("n", "<F4>", "<cmd> lua require('dap').restart() <CR>")
 vim.keymap.set("n", "<F5>", "<cmd> lua _G.Runner() <CR>")
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)

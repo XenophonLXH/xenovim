@@ -16,7 +16,6 @@ keymap("n", "<C-g>", ":Neotree toggle float git_status<cr>", default_opts) -- Sh
 -- ToggleTerm
 keymap("n", "<C-t>", ":ToggleTerm size=5 direction=float<cr>", default_opts)
 keymap("n", "<F9>", "<cmd>3TermExec size=50 cmd='todo' direction=vertical go_back=0 <CR>", default_opts)
-keymap("n", "<F8>", "<cmd>TermExec cmd='python' go_back=0 <CR>", default_opts)
 keymap("n", "<F7>", "<cmd>2TermExec cmd='lazygit' go_back=0 direction=float <cr>", default_opts)
 
 -- Buffer Navigation
