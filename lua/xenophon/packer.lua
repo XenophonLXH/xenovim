@@ -40,6 +40,11 @@ return require('packer').startup(function(use)
   -- Theme: TreeSitter
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use( 'nvim-treesitter/playground' )
+  use({
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      after = "nvim-treesitter",
+      requires = "nvim-treesitter/nvim-treesitter",
+  })
 
   -- File Management: Harpoon - bookmark files
   use( 'theprimeagen/harpoon' )
@@ -169,5 +174,11 @@ use { "elkowar/yuck.vim" }
 
 -- Bufferline
 use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+-- Mini.ai (vim motions)
+use {'echasnovski/mini.ai'}
+
+
+
 
 end)

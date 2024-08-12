@@ -20,4 +20,4 @@ require("xenophon.dap_ui")
 require("xenophon.dap")
 require("xenophon.global")
 require("xenophon.bufferline")
-
+require("xenophon.mini-ai")
