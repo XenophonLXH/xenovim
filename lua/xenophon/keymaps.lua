@@ -28,8 +28,8 @@ vim.keymap.set('n', '<leader>fu', builtin.lsp_references, {})
 
 --- Smart Splitter
 local smartsplits = require('smart-splits')
-vim.keymap.set('n', '<A-h>', function() require("smart-splits").move_cursor_left() end, { desc = 'Move to left' })
 vim.keymap.set('n', '<A-m>', function() require("smart-splits").move_cursor_down() end, { desc = 'Move to down' })
+vim.keymap.set('n', '<A-h>', function() require("smart-splits").move_cursor_left() end, { desc = 'Move to left' })
 vim.keymap.set('n', '<A-n>', function() require("smart-splits").move_cursor_up() end, { desc = 'Move to up' })
 vim.keymap.set('n', '<A-l>', function() require("smart-splits").move_cursor_right() end, { desc = 'Move to right' })
 
@@ -44,6 +44,7 @@ vim.keymap.set("n", "<F2>", "<cmd> DapToggleBreakpoint <CR>")
 vim.keymap.set("n", "<F8>", "<cmd> lua require('dap').terminate() <CR>")
 vim.keymap.set("n", "<F4>", "<cmd> lua require('dap').restart() <CR>")
 vim.keymap.set("n", "<F5>", "<cmd> lua _G.Runner() <CR>")
+vim.keymap.set("n", "<F9>", "<cmd> lua _G.Conditional() <CR>")
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
 vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
 vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)

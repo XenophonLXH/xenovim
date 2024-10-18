@@ -62,3 +62,7 @@ function _G.OdooRunner()
     )
 end
 
+function _G.Conditional()
+    local condition = vim.fn.input("Condition: ", "")
+    dap.toggle_breakpoint(condition)
+end

@@ -94,5 +94,18 @@ dap.configurations.python = {
     cwd = '${workspaceFolder}',
     console = "internalConsole",
   },
+  {
+    type = 'python',
+    request = 'launch',
+    name = 'Runbot 14',
+    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
+    pythonPath = "/home/xenophon/Development/TaskFlow/venv/runbot14/bin/python3",
+    args = {
+            '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-14-runbot.conf',
+            '--limit-time-real=10000000',
+    }, -- Adjust arguments as needed
+    cwd = '${workspaceFolder}',
+    console = "internalConsole",
+  },
 }
 dap.set_log_level('DEBUG')
