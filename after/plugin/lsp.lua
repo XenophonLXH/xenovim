@@ -97,3 +97,14 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+-- Godot support
+local port = '6005'
+local cmd = vim.lsp.rpc.connect('127.0.0.1', port)
+
+lsp.configure('gdscript', {
+    force_setup = true, -- because the LSP is global. Read more on lsp-zero docs about this.
+    single_file_support = false,
+    cmd = cmd,
+    root_dir = require('lspconfig.util').root_pattern('project.godot', '.git'),
+    filetypes = {'gd', 'gdscript', 'gdscript3' }
+})

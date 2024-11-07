@@ -1,6 +1,6 @@
 require 'nvim-treesitter.configs'.setup {
 
-    ensure_install = { "c", "help", "javascript", "python", "html", "lua", "vim", "help"},
+    ensure_install = { "c", "help", "javascript", "python", "html", "lua", "vim", "help", "gdscript", "godot_resource", "gdshader" },
 
     sync_install = false,
 
