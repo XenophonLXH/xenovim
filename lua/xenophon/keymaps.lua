@@ -34,12 +34,12 @@ vim.keymap.set('n', '<A-n>', function() require("smart-splits").move_cursor_up()
 vim.keymap.set('n', '<A-l>', function() require("smart-splits").move_cursor_right() end, { desc = 'Move to right' })
 
 
--- Remap Page Up/Down
+--- Remap Page Up/Down
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 
--- Debug
+--- Debug
 vim.keymap.set("n", "<F2>", "<cmd> DapToggleBreakpoint <CR>")
 vim.keymap.set("n", "<F8>", "<cmd> lua require('dap').terminate() <CR>")
 vim.keymap.set("n", "<F4>", "<cmd> lua require('dap').restart() <CR>")
@@ -50,7 +50,7 @@ vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
 vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
 
 
--- Obsidian
+--- Obsidian
 -- File Manipulation
 vim.keymap.set("n", "<leader><leader>oo", "<cmd> lua _G.ObsidianOpen() <CR>")
 vim.keymap.set("n", "<leader><leader>os", "<cmd> lua _G.ObsidianQuickSwitch() <CR>")

@@ -24,7 +24,7 @@ keymap("n", "<S-h>", "<cmd>bprevious<cr>", default_opts)
 -- File Operations
 keymap("n", "<C-s>", "<cmd>w<cr><cr>", default_opts)
 keymap("n", "<C-q>", "<cmd>q<cr><cr>", default_opts)
-keymap("n", "<leader>qq", "<cmd>q<cr><cr>", default_opts)
+keymap("n", "<leader>qq", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", default_opts)
 keymap("n", "|", "<cmd>vsplit<cr>", default_opts)
 keymap("n", "\\", "<cmd>split<cr>", default_opts)
 keymap("n", "<leader>bc", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", default_opts)

@@ -22,12 +22,12 @@ require("monokai-pro").setup({
     annotation = { italic = true },
     tag_attribute = { italic = true }, -- attribute of tag in reactjs
   },
-  filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
+  filter = "classic", -- classic | octagon | pro | machine | ristretto | spectrum
   -- Enable this will disable filter option
   day_night = {
     enable = true, -- turn off by default
-    day_filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
-    night_filter = "classic", -- classic | octagon | pro | machine | ristretto | spectrum
+    day_filter = "classic", -- classic | octagon | pro | machine | ristretto | spectrum
+    night_filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
   },
   inc_search = "background", -- underline | background
   background_clear = {
@@ -55,7 +55,7 @@ require("monokai-pro").setup({
       return {
         -- dark2 = "#101014",
         -- dark1 = "#16161E",
-        background = "#1A1B26",
+        -- background = "#1A1B26",
         -- text = "#C0CAF5",
         -- accent1 = "#f7768e",
         -- accent2 = "#7aa2f7",
@@ -70,15 +70,15 @@ require("monokai-pro").setup({
         -- dimmed5 = "#16161e",
       }
     end,
-  overrideScheme = function(cs, p, config, hp)
-      local cs_override = {}
-      local calc_bg = hp.blend(p.background, 0.95, '#000000')
+  -- overrideScheme = function(cs, p, config, hp)
+  --     local cs_override = {}
+  --     local calc_bg = hp.blend(p.background, 0.95, '#000000')
 
-      cs_override.editor = {
-        background = calc_bg,
-      }
-      return cs_override
-    end
+  --     cs_override.editor = {
+  --       background = calc_bg,
+  --     }
+  --     return cs_override
+  --   end
   })
 -- lua
 vim.cmd([[colorscheme monokai-pro]])
