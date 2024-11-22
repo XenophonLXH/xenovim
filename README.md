@@ -12,7 +12,6 @@ Feel free to clone/fork the repo and make it your own.
 * Catpuccin: https://github.com/catppuccin/nvim
 * Lualine: https://github.com/nvim-lualine/lualine.nvim
 * Notify: https://github.com/rcarriga/nvim-notify
-* Noice: https://github.com/folke/noice.nvim
 * Colorizer: https://github.com/ggandor/leap.nvim
 ### Navigation
 * Harpoon: https://github.com/ThePrimeagen/harpoon
