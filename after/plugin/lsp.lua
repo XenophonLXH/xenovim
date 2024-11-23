@@ -1,52 +1,93 @@
+local lspconfig = require('lspconfig')
 local lsp = require("lsp-zero")
-vim.lsp.set_log_level "off"
 lsp.preset("recommended")
+lsp.setup()
 
--- Ensure servers are installed
-lsp.ensure_installed({
-  'rust_analyzer',
-  'html',
-  'luau_lsp',
+-- Reserve a space in the gutter
+-- This will avoid an annoying layout shift in the screen
+vim.opt.signcolumn = 'yes'
+
+-- Custom LSP
+local lsp_configs = require('lspconfig.configs')
+if not lsp_configs.odoo_lsp then
+    lsp_configs.odoo_lsp = {
+        default_config = {
+            name = 'odoo-lsp',
+            cmd = {'odoo-lsp'},
+            filetypes = {'javascript', 'xml', 'python'},
+            root_dir = require('lspconfig.util').root_pattern('.odoo_lsp', '.odoo_lsp.json', '.git')
+        }
+    }
+end
+
+lspconfig.odoo_lsp.setup({})
+
+lspconfig.pylsp.setup {
+    root_dir = "/home/xenophon/Development/",
+}
+
+lspconfig.ts_ls.setup({
+    root_dir = "/home/xenophon/Development/"
 })
 
--- Configuration for individual servers
-lsp.configure('pylsp', {
+lspconfig.rust_analyzer.setup({
     settings = {
-        pylsp = {
-            plugins = {
-                pyflakes = {enabled = true},
-                mccabe = {enabled = true},
-                pylint = {enabled = false},
-            },
+        ['rust-analyzer'] = {
+            diagnostics = {
+                enable = false;
+            }
         },
-    },
-    root_dir = "/home/xenophon/Development/"
+        root_dir = "/home/xenophon/Development/"
+    }
 })
 
-lsp.configure('ts_ls', {
-    root_dir = "/home/xenophon/Development/"
+local port = '6005'
+local cmd = vim.lsp.rpc.connect('127.0.0.1', port)
+
+lspconfig.gdscript.setup({
+    force_setup = true, -- Because lsp is global read more on docs for lsp-zero
+    single_file_support = false,
+    cmd = cmd,
+    root_dir = require('lspconfig.util').root_pattern('project.godot', '.git'),
+    filetypes = {'gd', 'gdscript', 'gdscript3' }
 })
 
-lsp.configure('lua-language-server', {
+lspconfig.lua_ls.setup({
+    on_init = function(client)
+        if client.workspace_folders then
+            local path = client.workspace_folders[1].name
+            if vim.uv.fs_stat(path..'/.luarc.json') or vim.uv.fs_stat(path..'/.luarc.jsonc') then
+                return
+            end
+        end
+
+        client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+            runtime = {
+                -- Tell the language server which version of Lua you're using
+                -- (most likely LuaJIT in the case of Neovim)
+                version = 'LuaJIT'
+            },
+            -- Make the server aware of Neovim runtime files
+            workspace = {
+                checkThirdParty = false,
+                library = {
+                    vim.env.VIMRUNTIME
+                    -- Depending on the usage, you might want to add additional paths here.
+                    -- "${3rd}/luv/library"
+                    -- "${3rd}/busted/library",
+                }
+                -- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
+                -- library = vim.api.nvim_get_runtime_file("", true)
+            }
+        })
+    end,
     settings = {
         Lua = {
             diagnostics = {
                 globals = { 'vim' }
             }
         }
-    },
-    root_dir = "/home/xenophon/Development/"
-})
-
-lsp.configure('rust-analyzer', {
-    diagnostics = {
-        enabled = true;
-    },
-    root_dir = "/home/xenophon/Development/"
-})
-
-lsp.configure('ruff_lsp', {
-    root_dir = "/home/xenophon/Development/"
+    }
 })
 
 -- Setup completion mappings
@@ -77,37 +118,29 @@ lsp.set_preferences({
     }
 })
 
--- Define `on_attach` function before `lsp.setup()`
-lsp.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
-
-  vim.keymap.set("n", "<leader>rgd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set("i", "<leader>vh", function() vim.lsp.buf.signature_help() end, opts)
-end)
-
--- Now call setup
-lsp.setup()
-
-vim.diagnostic.config({
-    virtual_text = true
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  callback = function(ev)
+    -- Enable completion triggered by <c-x><c-o>
+    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+    local opts = { buffer = ev.buf }
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    vim.keymap.set('n', '<space>wl', function()
+      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    end, opts)
+    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', '<space>f', function()
+      vim.lsp.buf.format { async = true }
+    end, opts)
+  end,
 })
 
--- Godot support
-local port = '6005'
-local cmd = vim.lsp.rpc.connect('127.0.0.1', port)
-
-lsp.configure('gdscript', {
-    force_setup = true, -- Because lsp is global read more on docs for lsp-zero
-    single_file_support = false,
-    cmd = cmd,
-    root_dir = require('lspconfig.util').root_pattern('project.godot', '.git'),
-    filetypes = {'gd', 'gdscript', 'gdscript3' }
-})
