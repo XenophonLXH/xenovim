@@ -5,7 +5,10 @@ lsp.setup()
 
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'no'
+vim.diagnostic.config({
+    virtual_text = true
+})
 
 -- Custom LSP
 local lsp_configs = require('lspconfig.configs')
@@ -23,6 +26,15 @@ end
 lspconfig.odoo_lsp.setup({})
 
 lspconfig.pylsp.setup {
+    settings = {
+        pylsp = {
+            plugins = {
+                pyflakes = {enabled = true},
+                mccabe = {enabled = true},
+                pylint = {enabled = false},
+            },
+        },
+    },
     root_dir = "/home/xenophon/Development/",
 }
 
