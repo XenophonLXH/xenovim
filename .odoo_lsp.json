@@ -1,0 +1,16 @@
+{
+  "module": {
+    "roots": [ "/home/xenophon/Development/TaskFlow/odoo",
+                "/home/xenophon/Development/TaskFlow/taskflow",
+                "/home/xenophon/Development/TaskFlow/taskflow-config" ]
+  },
+  "symbols": {
+    "limit": 80
+  },
+  "references": {
+    "limit": 80
+  },
+  "completions": {
+    "limit": 200
+  }
+}
