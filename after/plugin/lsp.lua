@@ -5,6 +5,7 @@ lsp.setup()
 
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
+vim.g.pyindent_open_paren = 0
 vim.opt.signcolumn = 'no'
 vim.diagnostic.config({
     virtual_text = true
