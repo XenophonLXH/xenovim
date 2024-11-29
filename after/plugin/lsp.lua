@@ -19,7 +19,8 @@ if not lsp_configs.odoo_lsp then
             name = 'odoo-lsp',
             cmd = {'odoo-lsp'},
             filetypes = {'javascript', 'xml', 'python'},
-            root_dir = require('lspconfig.util').root_pattern('.odoo_lsp', '.odoo_lsp.json', '.git')
+            -- root_dir = require('lspconfig.util').root_pattern('.odoo_lsp', '.odoo_lsp.json', '.git')
+            root_dir = "/home/xenophon/Development/TaskFlow/taskflow"
         }
     }
 end
