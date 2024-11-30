@@ -1,3 +1,5 @@
+vim.o.termguicolors = true
+
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
