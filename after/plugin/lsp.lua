@@ -35,6 +35,12 @@ lspconfig.pylsp.setup {
                 pyflakes = {enabled = true},
                 mccabe = {enabled = true},
                 pylint = {enabled = false},
+                jedi = {
+                    extra_paths = {
+                        '/home/xenophon/Development/TaskFlow/odoo/',
+                        '/home/xenophon/Development/TaskFlow/taskflow/'
+                    },
+                },
             },
         },
     },
