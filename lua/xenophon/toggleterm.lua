@@ -3,7 +3,7 @@ require("toggleterm").setup({
     size = 1,
     float_opts = {
         width = 160,
-        height = 60,
+        height = 50,
         winblend = 5,
         border = 'curved',
     },
