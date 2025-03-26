@@ -1,4 +1,4 @@
-vim.lsp.set_log_level('off')
+vim.lsp.set_log_level('error')
 local lspconfig = require('lspconfig')
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
@@ -26,7 +26,7 @@ if not lsp_configs.odoo_lsp then
     }
 end
 
-lspconfig.odoo_lsp.setup({})
+-- lspconfig.odoo_lsp.setup({})
 
 lspconfig.pylsp.setup {
     settings = {
@@ -37,8 +37,10 @@ lspconfig.pylsp.setup {
                 pylint = {enabled = false},
                 jedi = {
                     extra_paths = {
+                        '/home/xenophon/Development/TaskFlow/',
                         '/home/xenophon/Development/TaskFlow/odoo/',
-                        '/home/xenophon/Development/TaskFlow/taskflow/'
+                        '/home/xenophon/Development/TaskFlow/taskflow/',
+                        '/home/xenophon/Development/TaskFlow/taskflow-config/'
                     },
                 },
             },

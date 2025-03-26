@@ -186,4 +186,12 @@ return require('lazy').setup({
         dependencies = 'nvim-tree/nvim-web-devicons'
     },
 
+    -- Copilot
+    {
+        "github/copilot.vim",
+        config = function()
+            vim.g.copilot_workspace_folders = {"~/Development/"}
+        end
+    }
+
 })
