@@ -97,8 +97,3 @@ opt.isfname:append("@-@")
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
-
-vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='grey' })
-vim.api.nvim_set_hl(0, 'LineNr', { fg='orange' })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { fg='orange' })
-vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='grey' })
