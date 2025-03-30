@@ -1,5 +1,4 @@
 require("xenophon.lazy")
-require("xenophon.settings")
 require("xenophon.blamer")
 require("xenophon.telescope")
 require("xenophon.keymaps")
