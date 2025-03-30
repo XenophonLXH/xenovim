@@ -1,6 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
-local expr_opts = { noremap = true, expr = true, silent = true }
 
 -- Resizing panes
 keymap("n", "<C-Left>", ":vertical resize +5<CR>", default_opts)
@@ -34,8 +33,6 @@ keymap("n", "<leader>bc", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", default_opts)
 -- Move lines up or down
 keymap("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
 keymap("n", "<A-k>", "<cmd>m .-2<CR>", default_opts)
-
--- Moved
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {}) -- Search File by name
@@ -71,7 +68,6 @@ vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
 vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
 vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
 
--- New
 -- Move Lines
 keymap("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
 keymap("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
