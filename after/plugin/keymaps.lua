@@ -34,6 +34,10 @@ keymap("n", "<leader>bc", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", default_opts)
 keymap("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
 keymap("n", "<A-k>", "<cmd>m .-2<CR>", default_opts)
 
+-- Copilot
+keymap("n", "<leader>coo", "<cmd>Copilot disable<cr>", default_opts)
+keymap("n", "<leader>cee", "<cmd>Copilot enable<cr>", default_opts)
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {}) -- Search File by name
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, {}) -- Search Grep
