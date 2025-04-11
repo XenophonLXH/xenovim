@@ -45,16 +45,16 @@ dapui.setup({
         {
         elements = {
         {
-            id = "repl",
-            size = 0.7,
+            id = "stacks",
+            size = 0.3,
           },
         {
-            id = "stacks",
-            size = 0.15,
+            id = "repl",
+            size = 0.3,
           },
         {
             id = "scopes",
-            size = 0.15,
+            size = 0.3,
           },
       },
         position = "bottom",

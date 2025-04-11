@@ -1,4 +1,11 @@
 local dap = require("dap")
+
+-- Set tmux as the external terminal for debuggin
+dap.defaults.fallback.external_terminal = {
+    command = "tmux",
+    args = { "new-window", "-t", "work:6", "-n", "debug" }
+}
+
 vim.g.dap_open_float = false;
 -- local ENV = os.getenv("VIRTUAL_ENV")
 -- local function isempty(s)
@@ -36,7 +43,8 @@ dap.configurations.python = {
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    console = "internalConsole",
+    -- console = "internalConsole",
+    console = "externalTerminal",
   },
   {
     type = 'python',
@@ -62,7 +70,8 @@ dap.configurations.python = {
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    console = "internalConsole",
+    -- console = "internalConsole",
+    console = "externalTerminal",
   },
   {
     type = 'python',
