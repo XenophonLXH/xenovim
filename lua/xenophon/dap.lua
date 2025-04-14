@@ -30,7 +30,7 @@ dap.configurations.python = {
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    console = "internalConsole",
+    console = "externalTerminal",
   },
   {
     type = 'python',
@@ -57,7 +57,7 @@ dap.configurations.python = {
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    console = "internalConsole",
+    console = "externalTerminal",
   },
   {
     type = 'python',
@@ -86,7 +86,7 @@ dap.configurations.python = {
             '--limit-time-real=10000000',
     },
     cwd = '${workspaceFolder}',
-    console = "internalConsole",
+    console = "externalTerminal",
   },
   {
     type = 'python',
@@ -101,7 +101,7 @@ dap.configurations.python = {
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    console = "internalConsole",
+    console = "externalTerminal",
   },
   {
     type = 'python',
@@ -114,7 +114,7 @@ dap.configurations.python = {
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    console = "internalConsole",
+    console = "externalTerminal",
   },
 }
 dap.set_log_level('DEBUG')
