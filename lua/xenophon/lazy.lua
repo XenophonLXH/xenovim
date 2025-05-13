@@ -62,6 +62,13 @@ return require('lazy').setup({
     -- Mini.ai (vim motions)
     'echasnovski/mini.ai',
 
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+
     -- NeoTree: Tree Like Filesystem browser
     {
         "nvim-neo-tree/neo-tree.nvim",
