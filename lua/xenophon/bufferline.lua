@@ -1,5 +1,6 @@
 require("bufferline").setup{
     options = {
+        numbers = "ordinal",
         diagnostics = "nvim_lsp",
         diagnostics_indicator = function(count, level)
             local icon = level:match("error") and " " or ""
@@ -16,7 +17,7 @@ require("bufferline").setup{
         enforce_regular_tabs = false,
         always_show_bufferline = true,
         indicator = {
-            icon = '▎',
+            icon = '  =>',
             style = 'icon',
         },
         modified_icon = '●',

@@ -97,3 +97,13 @@ opt.isfname:append("@-@")
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[hi Cursor guibg=red]])
+vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
+vim.cmd [[
+hi BufferLineFill guibg='#19172400'
+hi BufferLineSeparator guibg='#19172400'
+hi BufferLineSeparatorVisible guibg='#191724'
+set termguicolors
+]]

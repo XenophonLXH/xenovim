@@ -81,7 +81,4 @@ require("monokai-pro").setup({
   --   end
   })
 -- lua
-vim.cmd([[colorscheme monokai-pro]])
-vim.cmd([[hi Cursor guibg=red]])
-vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
--- vim.api.guicursor = "guicursor=n-v-c:block-Cursor/lCursor"
+-- vim.cmd([[colorscheme monokai-pro]])

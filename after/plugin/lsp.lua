@@ -21,7 +21,7 @@ if not lsp_configs.odoo_lsp then
             cmd = {'odoo-lsp'},
             filetypes = {'javascript', 'xml', 'python'},
             -- root_dir = require('lspconfig.util').root_pattern('.odoo_lsp', '.odoo_lsp.json', '.git')
-            root_dir = "/home/xenophon/Development/TaskFlow/taskflow"
+            root_dir = "/home/xenophon/Development/TaskFlow"
         }
     }
 end
@@ -31,10 +31,26 @@ end
 lspconfig.pylsp.setup {
     settings = {
         pylsp = {
+            configurationSources = { 'flake8' },
             plugins = {
-                pyflakes = {enabled = true},
+                flake8 = {
+                    enabled = false,
+                    ignore = { 'E501', 'E231' },
+                    maxLineLength = 88,
+                },
+                black = {enabled = true},
+                autopep8 = { enabled = false },
                 mccabe = {enabled = true},
-                pylint = {enabled = false},
+                pycodestyle = {
+                    enabled = true,
+                    ignore = { 'E501', 'E231' },
+                    maxLineLength = 88,
+                },
+                pyflakes = {enabled = true},
+                jedi_completion = {
+                    include_params = true,
+                },
+                jedi_signature_help = {enabled = true},
                 jedi = {
                     extra_paths = {
                         '/home/xenophon/Development/TaskFlow/',

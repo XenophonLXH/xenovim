@@ -15,10 +15,17 @@ require("tokyonight").setup({
         floats = "transparent", -- style for floating windows
     },
     day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-    dim_inactive = false, -- dims inactive windows
+    dim_inactive = true, -- dims inactive windows
     lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
+    cache = true,
 })
 
 vim.cmd([[colorscheme tokyonight]])
 vim.cmd([[hi Cursor guibg=red]])
 vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
+vim.cmd [[
+hi BufferLineFill guibg='#19172400'
+hi BufferLineSeparator guibg='#19172400'
+hi BufferLineSeparatorVisible guibg='#191724'
+set termguicolors
+]]
