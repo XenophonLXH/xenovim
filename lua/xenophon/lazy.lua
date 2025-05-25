@@ -35,6 +35,10 @@ return require('lazy').setup({
     "navarasu/onedark.nvim",
     -- Theme: Github nvim theme
     "projekt0n/github-nvim-theme",
+    -- Theme: Nightfox
+    "EdenEast/nightfox.nvim",
+    -- Theme: catppuccin
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     -- Treesitter
     'nvim-treesitter/playground',
     -- Terminal: ToggleTerm
