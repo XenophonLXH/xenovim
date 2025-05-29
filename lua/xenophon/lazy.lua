@@ -225,6 +225,9 @@ return require('lazy').setup({
         keys = {
             { "<F7>", "<cmd>LazyGit<cr>", desc = "LazyGit" }
         }
-    }
+    },
+
+    -- Visimatch
+    { "wurli/visimatch.nvim", opts = {} }
 
 })
