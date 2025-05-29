@@ -228,6 +228,22 @@ return require('lazy').setup({
     },
 
     -- Visimatch
-    { "wurli/visimatch.nvim", opts = {} }
+    { "wurli/visimatch.nvim", opts = {} },
+
+    -- TreeSJ
+    {
+        "Wansmer/treesj",
+        keys = {
+            {
+                "<leader>m",
+                "<CMD>TSJToggle<CR>",
+                desc = "Toggle Treesj",
+            },
+        },
+        cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
+        opts = {
+            use_default_keymaps = false,
+        },
+    },
 
 })
