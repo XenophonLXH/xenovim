@@ -116,5 +116,18 @@ dap.configurations.python = {
     cwd = '${workspaceFolder}',
     console = "externalTerminal",
   },
+  {
+    type = 'python',
+    request = 'launch',
+    name = 'Odoo 18',
+    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
+    pythonPath = "/home/xenophon/Development/Personal/venv/odoo-18/bin/python3",
+    args = {
+            '--config=/home/xenophon/Development/Personal/configs/odoo-server-18.conf',
+            '--limit-time-real=10000000',
+    }, -- Adjust arguments as needed
+    cwd = '${workspaceFolder}',
+    console = "externalTerminal",
+  },
 }
 dap.set_log_level('DEBUG')
