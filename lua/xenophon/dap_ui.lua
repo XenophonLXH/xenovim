@@ -43,23 +43,30 @@ dapui.setup({
     },
     layouts = {
         {
-        elements = {
-        {
-            id = "stacks",
-            size = 0.3,
-          },
-        {
-            id = "repl",
-            size = 0.3,
-          },
-        {
-            id = "scopes",
-            size = 0.3,
-          },
-      },
-        position = "bottom",
-        size = 10
-      } },
+            elements = {
+                {
+                    id = "repl",
+                    size = 1,
+                },
+            },
+            position = "bottom",
+            size = 10
+        },
+        -- {
+        --     elements = {
+        --         {
+        --             id = "stacks",
+        --             size = 0.5,
+        --         },
+        --         {
+        --             id = "scopes",
+        --             size = 0.5,
+        --         },
+        --     },
+        --     position = "right",
+        --     size = 10
+        -- },
+  },
     mappings = {
       edit = "e",
       expand = { "<CR>", "<2-LeftMouse>" },
