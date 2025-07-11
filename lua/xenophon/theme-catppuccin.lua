@@ -52,7 +52,7 @@ require('catppuccin').setup({
         information = { 'underline' },
       },
     },
-    cmp = true,
+    cmp = false,
     telescope = true,
     nvimtree = true,
   },
@@ -94,6 +94,7 @@ require('catppuccin').setup({
 })
 
 vim.cmd.colorscheme('catppuccin')
+vim.o.winborder = "rounded"
 
 vim.cmd([[
 hi clear EndOfBuffer
