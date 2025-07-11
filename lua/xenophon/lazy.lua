@@ -260,6 +260,7 @@ return require('lazy').setup({
     {
         "chrisgrieser/nvim-origami",
         event = "VeryLazy",
+        version = 'v1.9',
         opts = {}, -- needed even when using default config
 
         -- recommended: disable vim's auto-folding

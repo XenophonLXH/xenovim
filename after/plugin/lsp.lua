@@ -80,16 +80,16 @@ lspconfig.rust_analyzer.setup({
     }
 })
 
-local port = '6005'
-local cmd = vim.lsp.rpc.connect('127.0.0.1', port)
+-- local port = '6005'
+-- local cmd = vim.lsp.rpc.connect('127.0.0.1', port)
 
-lspconfig.gdscript.setup({
-    force_setup = true, -- Because lsp is global read more on docs for lsp-zero
-    single_file_support = false,
-    cmd = cmd,
-    root_dir = require('lspconfig.util').root_pattern('project.godot', '.git'),
-    filetypes = {'gd', 'gdscript', 'gdscript3' }
-})
+-- lspconfig.gdscript.setup({
+--     force_setup = true, -- Because lsp is global read more on docs for lsp-zero
+--     single_file_support = false,
+--     cmd = cmd,
+--     root_dir = require('lspconfig.util').root_pattern('project.godot', '.git'),
+--     filetypes = {'gd', 'gdscript', 'gdscript3' }
+-- })
 
 lspconfig.lua_ls.setup({
     on_init = function(client)
