@@ -94,7 +94,7 @@ require('catppuccin').setup({
 })
 
 vim.cmd.colorscheme('catppuccin')
-vim.o.winborder = "rounded"
+-- vim.o.winborder = "rounded"
 
 vim.cmd([[
 hi clear EndOfBuffer
