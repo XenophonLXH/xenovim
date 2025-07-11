@@ -26,7 +26,7 @@ if not lsp_configs.odoo_lsp then
     }
 end
 
--- lspconfig.odoo_lsp.setup({})
+lspconfig.odoo_lsp.setup({})
 
 lspconfig.pylsp.setup {
     settings = {
