@@ -1,1 +1,5 @@
-require("xenophon")
+require("config.options")
+require("core.lazy")
+require("core.options")
+require("config.keymaps")
+require("core.autocmds")
