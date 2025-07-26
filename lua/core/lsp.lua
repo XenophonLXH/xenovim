@@ -1,9 +1,14 @@
 vim.lsp.enable({
+    'lua_ls',
+    'odoo_lsp',
+    'pylsp',
+    'rust_analyzer',
+    'ts_ls',
 })
 
 vim.diagnostic.config({
     virtual_lines = true,
-    -- virtual_text = true,
+    virtual_text = true,
     underline = true,
     update_in_insert = false,
     severity_sort = true,
