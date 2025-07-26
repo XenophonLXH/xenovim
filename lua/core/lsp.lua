@@ -1,3 +1,5 @@
+local hover = vim.lsp.buf.hover
+
 vim.lsp.enable({
     'lua_ls',
     'odoo_lsp',
@@ -30,3 +32,11 @@ vim.diagnostic.config({
         },
     },
 })
+
+vim.lsp.buf.hover = function()
+    return hover({
+        max_width = 100,
+        max_height = 14,
+        border = 'rounded',
+    })
+end
