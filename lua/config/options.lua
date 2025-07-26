@@ -100,3 +100,6 @@ vim.g.markdown_recommended_style = 0
 
 -- Copilot
 vim.g.copilot_no_tab_map = true
+
+-- Borders
+vim.opt.winborder = 'rounded'

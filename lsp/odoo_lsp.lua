@@ -7,7 +7,5 @@ return {
         'xml',
         'javascript',
     },
-    root_dir = function(fname)
-        return vim.fs.dirname(vim.fs.find({'.git', 'odoo.conf'}, {path = fname, upward = true})[1])
-    end,
+    root_dir = "/home/xenophon/Development/TaskFlow"
 }

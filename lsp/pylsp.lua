@@ -1,4 +1,6 @@
 return {
+    cmd = { 'pylsp' },
+    filetypes = { 'python' },
     settings = {
         pylsp = {
             configurationSources = { 'flake8' },
@@ -32,5 +34,11 @@ return {
             },
         },
     },
-    root_dir = "/home/xenophon/Development/",
+    root_markers = {
+        '.git',
+        'setup.py',
+        'pyproject.toml',
+        'requirements.txt',
+    },
+    -- root_dir = "/home/xenophon/Development/",
 }
