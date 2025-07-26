@@ -38,7 +38,6 @@ return {
                         border = 'single',
                         scrolloff = 1,
                         scrollbar = false,
-                        windblend = 0,
                         draw = {
                             columns = {
                                 { "kind_icon" },
