@@ -1,6 +1,6 @@
 require("config.options")
 require("core.lazy")
-require("config.options")
+require("core.lsp")
 require("config.keymaps")
 require("config.dap-configs")
 require("config.autocmds")

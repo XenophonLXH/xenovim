@@ -1,10 +1,6 @@
 return {
-    "nvim-lualine/lualine.nvim",
-    dependencies = {
-        "kyazdani42/nvim-web-devicons",
-        "rcarriga/nvim-notify",
-    },
-    config = function()
+    "rcarriga/nvim-notify",
+    config = function(_, opts)
         require("notify").setup({
             stages = "fade",
             background_color = "#000000",
