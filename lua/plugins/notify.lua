@@ -1,7 +1,8 @@
 return {
     "nvim-lualine/lualine.nvim",
     dependencies = {
-        "kyazdani42/nvim-web-devicons", opt = true
+        "kyazdani42/nvim-web-devicons",
+        "rcarriga/nvim-notify",
     },
     config = function()
         require("notify").setup({
