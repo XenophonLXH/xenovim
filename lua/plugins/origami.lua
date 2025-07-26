@@ -18,7 +18,7 @@ return {
                 enabled = false,
                 kinds = { "comment", "imports" }, ---@type lsp.FoldingRangeKind[]
             },
-            foldtextWithLineCount = {
+            foldText = {
                 enabled = not package.loaded["ufo"],
                 template = "   %s lines", -- `%s` gets the number of folded lines
                 hlgroupForCount = "Comment",
