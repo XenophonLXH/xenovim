@@ -103,3 +103,7 @@ vim.g.copilot_no_tab_map = true
 
 -- Borders
 vim.opt.winborder = 'rounded'
+
+-- Disable netrw
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
