@@ -26,6 +26,14 @@ return {
                 lualine_y = {'location', 'progress' },
                 lualine_z = {'os.date("%H:%M")'},
             },
+            winbar = {
+                lualine_a = {},
+                lualine_b = {},
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = {},
+                lualine_z = {'branch'}
+            }
         }
     end,
 }
