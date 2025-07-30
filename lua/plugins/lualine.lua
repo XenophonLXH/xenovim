@@ -17,10 +17,10 @@ return {
                     tabline = 1000,
                     winbar = 1000,
                 },
-                disabled_filetypes = {
-                    'dashboard', 'alpha', 'NvimTree', 'Outline', 'toggleterm',
-                    'Trouble', 'lazy', 'mason', 'help', 'TelescopePrompt',
-                    'NeoTree', 'neo-tree', 'NeogitStatus'
+                ignore_focus = {
+                    'NeoTree',
+                    'neo-tree',
+                    'NeogitStatus'
                 },
             },
             sections = {
