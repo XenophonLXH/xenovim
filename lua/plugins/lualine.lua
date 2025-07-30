@@ -20,7 +20,27 @@ return {
                 ignore_focus = {
                     'NeoTree',
                     'neo-tree',
-                    'NeogitStatus'
+                    'NeogitStatus',
+                    'nvim-dap-repl',
+                    'nvim-dap-ui',
+                    'dap-ui',
+                    "dapui_watches",
+                    "dapui_breakpoints",
+                    "dapui_scopes",
+                    "dapui_console",
+                    "dapui_stacks",
+                    'dap-repl',
+                },
+                disabled_filetypes = {
+                    'nvim-dap-repl',
+                    'nvim-dap-ui',
+                    'dap-ui',
+                    "dapui_watches",
+                    "dapui_breakpoints",
+                    "dapui_scopes",
+                    "dapui_console",
+                    "dapui_stacks",
+                    'dap-repl',
                 },
             },
             sections = {
