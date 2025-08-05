@@ -13,6 +13,10 @@ return {
         no_italic = true,
         no_underline = true,
         transparent_background = true,
+        float = {
+            transparent = true, -- enable transparent floating windows
+            solid = true, -- use solid styling for floating windows, see |winborder|
+        },
         styles = {
             comments = {},
             conditionals = {},
