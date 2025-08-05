@@ -8,7 +8,12 @@ vim.lsp.set_log_level("off")
 
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
-vim.g.pyindent_open_paren = 0
+-- This will avoid an annoying layout shift in the screen
+Set = vim.opt
+Let = vim.g
+Set.shiftwidth = 4
+
+Let.pyindent_open_paren = Set.shiftwidth
 vim.opt.signcolumn = "no"
 vim.diagnostic.config({
   virtual_text = true,
