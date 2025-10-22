@@ -3,7 +3,7 @@ local dap = require("dap")
 -- Set tmux as the external terminal for debuggin
 dap.defaults.fallback.external_terminal = {
     command = "tmux",
-    args = { "new-window", "-t", "work:6", "-n", "debug" }
+    args = { "new-window", "-d", "-t", "work:6", "-n", "debug" }
 }
 
 vim.g.dap_open_float = false;
