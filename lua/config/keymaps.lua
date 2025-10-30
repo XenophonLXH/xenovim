@@ -30,8 +30,8 @@ vim.keymap.set("n", "\\", "<cmd>split<cr>", default_opts)
 vim.keymap.set("n", "<leader>bc", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", default_opts)
 
 -- Move lines up or down
-vim.keymap.set("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
-vim.keymap.set("n", "<A-k>", "<cmd>m .-2<CR>", default_opts)
+-- vim.keymap.set("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
+-- vim.keymap.set("n", "<A-k>", "<cmd>m .-2<CR>", default_opts)
 
 -- Copilot
 vim.keymap.set("n", "<leader>coo", "<cmd>Copilot disable<cr>", default_opts)
@@ -55,9 +55,9 @@ vim.keymap.set('n', '<leader>fu', builtin.lsp_references, {})
 --- Vim
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)  -- Exit Vim File
 --- Smart Splitter local smartsplits = require('smart-splits')
-vim.keymap.set('n', '<A-m>', function() require("smart-splits").move_cursor_down() end, { desc = 'Move to down' })
+vim.keymap.set('n', '<A-j>', function() require("smart-splits").move_cursor_down() end, { desc = 'Move to down' })
 vim.keymap.set('n', '<A-h>', function() require("smart-splits").move_cursor_left() end, { desc = 'Move to left' })
-vim.keymap.set('n', '<A-n>', function() require("smart-splits").move_cursor_up() end, { desc = 'Move to up' })
+vim.keymap.set('n', '<A-k>', function() require("smart-splits").move_cursor_up() end, { desc = 'Move to up' })
 vim.keymap.set('n', '<A-l>', function() require("smart-splits").move_cursor_right() end, { desc = 'Move to right' })
 
 --- Remap Page Up/Down
@@ -75,12 +75,12 @@ vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
 vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
 
 -- Move Lines
-vim.keymap.set("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
-vim.keymap.set("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
-vim.keymap.set("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
-vim.keymap.set("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
-vim.keymap.set("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
-vim.keymap.set("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+vim.keymap.set("v", "<A-n>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+vim.keymap.set("n", "<A-n>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+vim.keymap.set("n", "<A-m>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+vim.keymap.set("i", "<A-n>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+vim.keymap.set("i", "<A-m>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+vim.keymap.set("v", "<A-m>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.keymap.set("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
