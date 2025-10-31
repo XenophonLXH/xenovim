@@ -2,7 +2,6 @@ return {
     "chrisgrieser/nvim-origami",
     event = "VeryLazy",
     opts = {}, -- needed even when using default config
-    tag = "v1.9",
 
     -- recommended: disable vim's auto-folding
     init = function()
@@ -12,27 +11,27 @@ return {
 
     config = function()
         require("origami").setup {
-            -- features incompatible with `nvim-ufo`
-            useLspFoldsWithTreesitterFallback = not package.loaded["ufo"],
+            useLspFoldsWithTreesitterFallback = true,
+            pauseFoldsOnSearch = true,
+            foldtext = {
+                enabled = true,
+                padding = 3,
+                lineCount = {
+                    template = "%d lines", -- `%d` is replaced with the number of folded lines
+                    hlgroup = "Comment",
+                },
+                diagnosticsCount = true, -- uses hlgroups and icons from `vim.diagnostic.config().signs`
+                gitsignsCount = true, -- requires `gitsigns.nvim`
+                disableOnFt = { "snacks_picker_input" }, ---@type string[]
+            },
             autoFold = {
-                enabled = false,
+                enabled = true,
                 kinds = { "comment", "imports" }, ---@type lsp.FoldingRangeKind[]
             },
-            foldText = {
-                enabled = not package.loaded["ufo"],
-                template = "   %s lines", -- `%s` gets the number of folded lines
-                hlgroupForCount = "Comment",
-            },
-
-            -- can be used with or without `nvim-ufo`
-            pauseFoldsOnSearch = true,
             foldKeymaps = {
-                setup = true, -- modifies `h` and `l`
+                setup = true, -- modifies `h`, `l`, and `$`
                 hOnlyOpensOnFirstColumn = false,
             },
-
-            -- features requiring `nvim-ufo`
-            keepFoldsAcrossSessions = package.loaded["ufo"],
         }
     end,
 }
