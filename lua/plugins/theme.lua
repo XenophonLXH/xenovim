@@ -1,4 +1,4 @@
-local my_flavour = 'frappe'
+local my_flavour = 'macchiato'
 vim.g.catppuccin_flavour = my_flavour -- latte, frappe, macchiato, mocha
 
 return {
