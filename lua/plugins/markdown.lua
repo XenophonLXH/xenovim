@@ -31,7 +31,7 @@ return {
             -- Filetypes this plugin will run on.
             file_types = { 'markdown' },
             -- Takes buffer as input, if it returns true this plugin will not attach to the buffer
-            ignore = function()
+            ignore = function(buffr)
                 return false
             end,
             -- Additional events that will trigger this plugin's render loop.
@@ -688,9 +688,15 @@ return {
                 -- Override for different buftype values, @see :h 'buftype'.
                 buftype = {
                     nofile = {
+                        heading = { enabled = false },
                         render_modes = true,
                         padding = { highlight = 'NormalFloat' },
                         sign = { enabled = false },
+                        paragraph = { enabled = false },
+                        document = { enabled = false },
+                        code = {
+                            enabled = true,
+                        },
                     },
                 },
                 -- Override for different filetype values, @see :h 'filetype'.
@@ -701,5 +707,5 @@ return {
                 -- @see [Custom Handlers](doc/custom-handlers.md)
             },
         })
-        end,
+    end,
 }
