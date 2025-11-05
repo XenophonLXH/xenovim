@@ -4,9 +4,8 @@ vim.lsp.enable({
     'cssls',
     'gopls',
     'lua_ls',
-    'odoo_lsp',
     'pylsp',
-    'pyrefly',
+    'ruff',
     'rust_analyzer',
     'ts_ls',
 })
@@ -38,7 +37,7 @@ vim.diagnostic.config({
 vim.lsp.buf.hover = function()
     return hover({
         max_width = 100,
-        max_height = 14,
+        max_height = 20,
         border = 'rounded',
     })
 end
