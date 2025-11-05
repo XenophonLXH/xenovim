@@ -37,7 +37,7 @@ vim.diagnostic.config({
 vim.lsp.buf.hover = function()
     return hover({
         max_width = 100,
-        max_height = 20,
+        max_height = 100,
         border = 'rounded',
     })
 end
