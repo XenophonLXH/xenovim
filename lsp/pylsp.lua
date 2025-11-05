@@ -8,17 +8,21 @@ return {
                 flake8 = {
                     enabled = false,
                     ignore = { 'E501', 'E231' },
-                    maxLineLength = 88,
+                    maxLineLength = 100,
                 },
-                black = {enabled = true},
-                autopep8 = { enabled = false },
+                black = {
+                    enabled = true,
+                },
+                autopep8 = { enabled = true },
                 mccabe = {enabled = true},
                 pycodestyle = {
                     enabled = true,
                     ignore = { 'E501', 'E231' },
-                    maxLineLength = 88,
+                    maxLineLength = 100,
                 },
-                pyflakes = {enabled = true},
+                pyflakes = {
+                    enabled = false,
+                },
                 jedi_completion = {
                     include_params = true,
                 },
