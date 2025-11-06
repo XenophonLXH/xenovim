@@ -122,6 +122,6 @@ vim.keymap.set("n", "<leader>xl", function()
 end, { desc = "Location List" })
 
 -- nvim.leap
-vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap-forward)')
-vim.keymap.set('n',             'S', '<Plug>(leap-backward)')
+vim.keymap.set({'n', 'x', 'o'}, 'zk', '<Plug>(leap-forward)')
+vim.keymap.set('n',             'zj', '<Plug>(leap-backward)')
 vim.keymap.set('n',             'gs', '<Plug>(leap-from-window)')
