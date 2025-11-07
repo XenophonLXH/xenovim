@@ -5,11 +5,12 @@ return {
             autochdir = false,
             size = 1,
             float_opts = {
-                width = 160,
-                height = 50,
-                winblend = 5,
+                width = 120,
+                height = 30,
+                winblend = 0,
                 border = 'curved',
             },
+            persist_mode = true,
         })
     end,
 }
