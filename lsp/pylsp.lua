@@ -29,10 +29,7 @@ return {
                 jedi_signature_help = {enabled = true},
                 jedi = {
                     extra_paths = {
-                        '/home/xenophon/Development/TaskFlow/',
-                        '/home/xenophon/Development/TaskFlow/odoo/',
-                        '/home/xenophon/Development/TaskFlow/taskflow/',
-                        '/home/xenophon/Development/TaskFlow/taskflow-config/'
+                        '/home/xenophon/Development/',
                     },
                 },
             },
