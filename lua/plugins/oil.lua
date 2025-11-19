@@ -5,12 +5,15 @@ return {
     },
     config = function()
         require("oil").setup({
-            default_file_explorer = false,
+            default_file_explorer = true,
             use_default_keymaps = false,
             view_options = {
                 show_hidden = true, -- Show hidden files
                 show_parent_dir = true, -- Show parent directory
             },
+            is_always_hidden = function(name, bufnr)
+                return "__pycache__"
+            end,
             keymaps = {
                 ["<CR>"] = "actions.select",
                 ["<C-c>"] = { "actions.close", mode = "n" },
