@@ -10,10 +10,10 @@ return {
             view_options = {
                 show_hidden = true, -- Show hidden files
                 show_parent_dir = true, -- Show parent directory
+                is_always_hidden = function(name, bufnr)
+                    return name == "__pycache__"
+                end,
             },
-            is_always_hidden = function(name, bufnr)
-                return "__pycache__"
-            end,
             keymaps = {
                 ["<CR>"] = "actions.select",
                 ["<C-c>"] = { "actions.close", mode = "n" },
