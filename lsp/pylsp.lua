@@ -6,9 +6,9 @@ return {
             configurationSources = { 'flake8' },
             plugins = {
                 flake8 = {
-                    enabled = false,
-                    ignore = { 'E501', 'E231' },
-                    maxLineLength = 100,
+                    enabled = true,
+                    ignore = { '*' },
+                    maxLineLength = 120,
                 },
                 black = {
                     enabled = true,
@@ -18,10 +18,11 @@ return {
                 pycodestyle = {
                     enabled = true,
                     ignore = { 'E501', 'E231' },
-                    maxLineLength = 100,
+                    maxLineLength = 120,
                 },
                 pyflakes = {
-                    enabled = false,
+                    enabled = true,
+                    ignore = { '*' },
                 },
                 jedi_completion = {
                     include_params = true,
@@ -30,6 +31,11 @@ return {
                 jedi = {
                     extra_paths = {
                         '/home/xenophon/Development/',
+                        '/home/xenophon/Development/odoo',
+                        '/home/xenophon/Development/.virtualenvs',
+                        '/home/xenophon/Development/TaskFlow',
+                        '/home/xenophon/Development/TaskFlow/taskflow',
+                        '/home/xenophon/Development/TaskFlow/taskflow-config',
                     },
                 },
             },
