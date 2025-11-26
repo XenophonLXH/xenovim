@@ -10,6 +10,7 @@ return  {
         -- A string like "nv", "nvo", "o", etc.
         labeled_modes = "q",
         multiline = true,
+        clever_repeat = true,
         -- Like `leap`s similar argument (call-specific overrides).
         -- E.g.: opts = { equivalence_classes = {} }
         opts = {}
