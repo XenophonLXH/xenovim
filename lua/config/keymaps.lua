@@ -7,11 +7,6 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize -5<CR>", default_opts)
 vim.keymap.set("n", "<C-Up>", ":resize -1<CR>", default_opts)
 vim.keymap.set("n", "<C-Down>", ":resize +1<CR>", default_opts)
 
--- Neotree
-vim.keymap.set("n", "<leader>o", ":Neotree left reveal_force_cwd<cr>", default_opts) -- focus tree and reveal current file
-vim.keymap.set("n", "<leader>e", ":Neotree toggle<cr>", default_opts) -- close tree 
-vim.keymap.set("n", "<C-g>", ":Neotree toggle float git_status<cr>", default_opts) -- Show git status float
-
 -- ToggleTerm
 vim.keymap.set("n", "<C-t>", ":ToggleTerm size=5 direction=float<cr>", default_opts)
 
