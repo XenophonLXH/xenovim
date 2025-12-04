@@ -7,22 +7,37 @@ return {
             plugins = {
                 flake8 = {
                     enabled = true,
-                    ignore = { '*' },
+                    ignore = {
+                        '*',
+                    },
                     maxLineLength = 120,
                 },
                 black = {
                     enabled = true,
                 },
-                autopep8 = { enabled = true },
-                mccabe = {enabled = true},
+                autopep8 = {
+                    enabled = true,
+                    ignore = {
+                        "W503",
+                    },
+                },
+                mccabe = {
+                    enabled = true,
+                    ignore = {
+                        "W503",
+                    },
+                },
                 pycodestyle = {
                     enabled = true,
-                    ignore = { 'E501', 'E231' },
+                    ignore = { 'E501', 'E231', 'W503' },
                     maxLineLength = 120,
                 },
                 pyflakes = {
                     enabled = true,
-                    ignore = { '*' },
+                    ignore = {
+                        '*',
+                        'W503'
+                    },
                 },
                 jedi_completion = {
                     include_params = true,
