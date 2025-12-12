@@ -111,6 +111,7 @@ return {
     hi link MsgSeparator StatusLine
     match CustomTabs /\t/
     hi CustomTabs guifg=#999999 gui=NONE
+    hi Directory guifg=#BA5F37
     match CustomTrailingWhiteSpaces /\s\+$/
     hi link CustomTrailingWhiteSpaces NonText
     " Setting ['@parameter'] = { style = {} } would clear
