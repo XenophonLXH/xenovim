@@ -11,7 +11,10 @@ return {
 
     config = function()
         require("origami").setup {
-            useLspFoldsWithTreesitterFallback = true,
+            useLspFoldsWithTreesitterFallback = {
+                enabled = true,
+                foldmethodIfNeitherIsAvailable = "indent",
+            },
             pauseFoldsOnSearch = true,
             foldtext = {
                 enabled = true,
