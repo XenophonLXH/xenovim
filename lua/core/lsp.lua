@@ -8,6 +8,7 @@ vim.lsp.enable({
     'ruff',
     'rust_analyzer',
     'ts_ls',
+    'odoo_lsp'
 })
 
 vim.diagnostic.config({

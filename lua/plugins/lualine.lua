@@ -57,7 +57,7 @@ return {
                 lualine_c = {},
                 lualine_x = {},
                 lualine_y = {},
-                lualine_z = {'branch'}
+                lualine_z = {}
             }
         }
     end,
