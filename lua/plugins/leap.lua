@@ -1,5 +1,5 @@
 return {
-    "ggandor/leap.nvim",
+    "https://codeberg.org/andyg/leap.nvim",
     config = function()
     --   ^----^^^--^^-^-^--^
     require('leap').opts.preview = function (ch0, ch1, ch2)

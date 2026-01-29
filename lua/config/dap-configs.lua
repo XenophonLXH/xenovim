@@ -148,4 +148,3 @@ dap.configurations.python = {
         end,
     },
 }
-dap.set_log_level('DEBUG')
