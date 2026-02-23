@@ -3,6 +3,6 @@ return {
     config = function()
         vim.g.copilot_workspace_folders = {"~/Development/"}
         -- Disable copilot by default
-        vim.cmd("Copilot disable")
+        vim.cmd("Copilot enable")
     end
 }
