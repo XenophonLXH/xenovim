@@ -62,7 +62,7 @@ return {
                 information = { 'underline' },
             },
             },
-            cmp = false,
+            cmp = true,
             telescope = true,
             nvimtree = true,
         },

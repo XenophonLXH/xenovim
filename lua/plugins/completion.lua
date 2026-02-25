@@ -4,6 +4,7 @@ return {
         "saghen/blink.cmp",
         dependencies = {
             "rafamadriz/friendly-snippets",
+            "fang2hou/blink-copilot",
         },
         version = "*",
         config = function()
@@ -11,14 +12,20 @@ return {
                 snippets = { preset = "luasnip" },
                 signature = { enabled = true },
                 appearance = {
-                    use_nvim_cmp_as_default = false,
+                    use_nvim_cmp_as_default = true,
                     nerd_font_variant = "normal",
                 },
                 sources = {
-                    default = { "lsp", "path", "snippets", "buffer" },
+                    default = { "lsp", "path", "snippets", "buffer", "copilot" },
                     providers = {
                         cmdline = {
                             min_keyword_length = 2,
+                        },
+                        copilot = {
+                            name = "copilot",
+                            module = "blink-copilot",
+                            score_offset = 100,
+                            async = true,
                         },
                     },
                 },
