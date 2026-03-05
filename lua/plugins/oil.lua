@@ -24,5 +24,16 @@ return {
             },
         })
         vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+        vim.api.nvim_create_autocmd("BufEnter", {
+            pattern = "oil://*",
+            once = true,
+            callback = function()
+                local dir = require("oil").get_current_dir()
+                if dir then
+                    vim.cmd("cd " .. vim.fn.fnameescape(dir))
+                end
+            end,
+        })
     end,
 }
