@@ -1,9 +1,10 @@
 local dap = require("dap")
 
--- Set tmux as the external terminal for debuggin
+-- Set tmux as the external terminal for debugging.
+-- The script kills any existing debug window, creates a fresh one, and keeps it alive after exit.
 dap.defaults.fallback.external_terminal = {
-    command = "tmux",
-    args = { "new-window", "-d", "-t", "work:6", "-n", "debug" }
+    command = "/home/xenophon/.config/nvim/scripts/dap-term.sh",
+    args = {}
 }
 
 vim.g.dap_open_float = false;
