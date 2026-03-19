@@ -1,5 +1,6 @@
 require("config.options")
 require("core.lazy")
+require("utils.theme_switcher").load_saved()
 require("core.lsp")
 require("config.keymaps")
 require("config.dap-configs")

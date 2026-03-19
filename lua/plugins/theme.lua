@@ -4,8 +4,7 @@ vim.g.catppuccin_flavour = my_flavour -- latte, frappe, macchiato, mocha
 return {
     "catppuccin/nvim",
     name = "catppuccin",
-    priority = 1000,
-    enabled = true,
+    lazy = true,
 
     config = function()
         require('catppuccin').setup({
@@ -102,81 +101,5 @@ return {
             return custom_highlights_table
         end,
         })
-
-    vim.cmd.colorscheme('catppuccin')
-    vim.cmd([[
-    hi clear EndOfBuffer
-    hi link EndOfBuffer NonText
-    hi clear MsgSeparator
-    hi link MsgSeparator StatusLine
-    match CustomTabs /\t/
-    hi CustomTabs guifg=#999999 gui=NONE
-    hi Directory guifg=#BA5F37
-    match CustomTrailingWhiteSpaces /\s\+$/
-    hi link CustomTrailingWhiteSpaces NonText
-    " Setting ['@parameter'] = { style = {} } would clear
-    " everything else and leave it without colors
-    hi @parameter gui=NONE cterm=NONE
-    hi @namespace gui=NONE cterm=NONE
-
-    hi clear @text.uri
-    hi link @text.uri @comment
-    hi @text.uri gui=ITALIC cterm=ITALIC
-    hi clear @string.special.url
-    hi link @string.special.url @text.uri
-
-    hi clear @module
-    hi link @module Type
-
-    hi clear @comment.todo
-    hi clear @comment.error
-    hi clear @comment.warning
-    hi clear @comment.hint
-    hi clear @comment.note
-    hi @comment.todo    gui=BOLD
-    hi @comment.error   gui=BOLD
-    hi @comment.warning gui=BOLD
-    hi @comment.hint    gui=BOLD
-    hi @comment.note    gui=BOLD
-
-    " hi @text.uri guifg=#CCCCCC gui=NONE cterm=NONE
-    " hi clear @nospell
-    " hi link @nospell @text.uri
-
-    " One day I woke up and go files looked like shit.
-    " Function call likes "fmt.Println" and builtins like "make"
-    " all had the same color as numbers, orange, and types are yellow.
-    " Everything looked like shit. They used to be blue, just like
-    " function declarations. So that's why I linked them to @function.
-    hi clear @method.call
-    hi link @method.call @function
-    " hi clear @function.builtin
-    " hi link @function.builtin @function
-    " Actually, I think builtin really were orange
-
-    hi clear @module
-    hi link @module Type
-
-    " I don't want to use after/syntax/elixir.vim to change these
-    " because I only want to do it when using catppuccin
-    " hi link elixirAlias @type
-    " hi link elixirExUnitAssert elixirFunctionDeclaration
-    " hi link elixirFunctionDeclaration @function
-
-    " hi DiffAdd    guibg=NONE
-    " hi DiffChange guibg=NONE
-    " hi DiffDelete guibg=NONE
-    " hi DiffText   guibg=NONE
-
-    hi Folded guibg=#101010
-
-    hi DiagnosticVirtualTextError    gui=ITALIC cterm=ITALIC
-    hi DiagnosticVirtualTextHint     gui=ITALIC cterm=ITALIC
-    hi DiagnosticVirtualTextInfo     gui=ITALIC cterm=ITALIC
-    hi DiagnosticVirtualTextOk       gui=ITALIC cterm=ITALIC
-    hi DiagnosticVirtualTextTextWarn gui=ITALIC cterm=ITALIC
-    ]])
-    vim.cmd([[hi Cursor guibg=red]])
-    vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
     end,
 }

@@ -28,6 +28,9 @@ vim.keymap.set("n", "<leader>bc", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", default_op
 -- vim.keymap.set("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
 -- vim.keymap.set("n", "<A-k>", "<cmd>m .-2<CR>", default_opts)
 
+-- Theme switcher
+vim.keymap.set("n", "<leader>ct", function() require('utils.theme_switcher').pick() end, { desc = "Switch Theme" })
+
 -- Copilot
 vim.keymap.set("n", "<leader>coo", "<cmd>Copilot disable<cr>", default_opts)
 vim.keymap.set("n", "<leader>cee", "<cmd>Copilot enable<cr>", default_opts)
