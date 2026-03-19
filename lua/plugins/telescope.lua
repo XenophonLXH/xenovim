@@ -25,7 +25,7 @@ return {
                 },
                 horizontal = {
                     height = 0.9,
-                    preview_cutoff = 120,
+                    preview_cutoff = 40,
                     prompt_position = "bottom",
                     width = 0.8
                 },
@@ -33,7 +33,7 @@ return {
                     anchor = "center",
                     height = 0.99,
                     preview_height = 0.65,
-                    preview_cutoff = 40,
+                    preview_cutoff = 20,
                     prompt_position = "top",
                     width = 0.9
                 }
