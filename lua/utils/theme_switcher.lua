@@ -35,6 +35,11 @@ local function post_common()
     hi DiagnosticVirtualTextInfo     gui=ITALIC cterm=ITALIC
     hi DiagnosticVirtualTextOk       gui=ITALIC cterm=ITALIC
     hi DiagnosticVirtualTextTextWarn gui=ITALIC cterm=ITALIC
+
+    hi BufferLineFill           guibg=NONE
+    hi BufferLineBackground     guibg=NONE
+    hi BufferLineBufferVisible  guibg=NONE
+    hi BufferLineBufferSelected guibg=NONE
     ]])
     vim.cmd([[hi Cursor guibg=red]])
     vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
