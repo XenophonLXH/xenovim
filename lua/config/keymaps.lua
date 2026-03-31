@@ -40,7 +40,35 @@ vim.keymap.set('i', '<C-l>', 'copilot#Accept("\\<CR>")', {
 })
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {}) -- Search File by name
-vim.keymap.set('n', '<leader>lg', builtin.live_grep, {}) -- Search Grep
+vim.keymap.set('n', '<leader>lg', function()
+    builtin.live_grep({
+        on_input_filter_cb = function(prompt)
+            local parts = vim.split(prompt, "  ", { plain = true })
+            if #parts < 2 then
+                return { prompt = prompt }
+            end
+            local query = parts[1]
+            local glob = vim.trim(parts[2])
+            return {
+                prompt = query,
+                updated_finder = require('telescope.finders').new_job(
+                    function(search)
+                        if not search or search == "" then return nil end
+                        local args = vim.deepcopy(require('telescope.config').values.vimgrep_arguments)
+                        if glob ~= "" then
+                            vim.list_extend(args, { "--glob", glob })
+                        end
+                        vim.list_extend(args, { "--", search, "." })
+                        return args
+                    end,
+                    require('telescope.make_entry').gen_from_vimgrep({}),
+                    nil,
+                    vim.fn.getcwd()
+                )
+            }
+        end,
+    })
+end, { desc = "Search Grep (query  *.ext)" }) -- Search Grep
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) -- Search Buffers
 vim.keymap.set('n', '<leader>ht', builtin.help_tags, {}) -- Find Help
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, {}) -- Grep String
