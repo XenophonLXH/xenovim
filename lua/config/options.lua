@@ -100,10 +100,6 @@ opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
 opt.isfname:append("@-@")
 
--- Spell
-opt.spelllang = { "en_us" }
-opt.spelloptions = "camel" -- treat camelCase as separate words
-
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
