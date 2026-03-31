@@ -131,6 +131,16 @@ vim.keymap.set("v", ">", ">gv", {})
 vim.keymap.set("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Below" })
 vim.keymap.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Above" })
 
+-- Spell
+vim.keymap.set("n", "<leader>ss", function()
+    vim.opt_local.spell = not vim.opt_local.spell:get()
+    vim.notify("Spell: " .. (vim.opt_local.spell:get() and "on" or "off"))
+end, { desc = "Toggle spell check" })
+vim.keymap.set("n", "<leader>sn", "]s", { desc = "Next misspelling" })
+vim.keymap.set("n", "<leader>sp", "[s", { desc = "Prev misspelling" })
+vim.keymap.set("n", "<leader>sa", "zg", { desc = "Add word to dictionary" })
+vim.keymap.set("n", "<leader>s?", "z=", { desc = "Suggest corrections" })
+
 -- quickfix list
 vim.keymap.set("n", "<leader>xq", function()
   local success, err = pcall(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and vim.cmd.cclose or vim.cmd.copen)
