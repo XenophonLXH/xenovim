@@ -87,6 +87,19 @@ M.themes = {
     { name = "bluloco",     plugin = "bluloco.nvim",     display = "Bluloco Dark",         post = post_common },
     { name = "oldworld",    plugin = "oldworld.nvim",    display = "Old World",            post = post_common },
     { name = "boo",         plugin = "boo-colorscheme-nvim", display = "Boo",              post = post_common },
+    { name = "vscode",      plugin = "vscode.nvim",          display = "VS Code",           post = post_common },
+    { name = "shale",       plugin = "shale.nvim",           display = "Shale",             post = post_common },
+    { name = "koda",              plugin = "koda.nvim",              display = "Koda",              post = post_common },
+    { name = "github_dark_dimmed", plugin = "github-nvim-theme",     display = "GitHub Dark Dimmed", post = post_common },
+    { name = "zenbones",          plugin = "zenbones.nvim",          display = "Zenbones",          post = post_common },
+    { name = "edge",              plugin = "edge",                   display = "Edge",              post = post_common },
+    { name = "nord",              plugin = "nord.nvim",              display = "Nord",              post = post_common },
+    { name = "solarized-osaka",   plugin = "solarized-osaka.nvim",   display = "Solarized Osaka",   post = post_common },
+    { name = "melange",           plugin = "melange-nvim",           display = "Melange",           post = post_common },
+    { name = "xcodedark",         plugin = "vim-colors-xcode",       display = "Xcode Dark",        post = post_common },
+    { name = "mellifluous",       plugin = "mellifluous.nvim",       display = "Mellifluous",       post = post_common },
+    { name = "lucius",            plugin = "vim-lucius",             display = "Lucius",            post = post_common },
+    { name = "kanagawa-paper",    plugin = "kanagawa-paper.nvim",    display = "Kanagawa Paper",    post = post_common },
 }
 
 M.apply = function(name)
