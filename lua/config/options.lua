@@ -80,6 +80,7 @@ opt.ignorecase = true -- Ignore case
 opt.linebreak = true -- Wrap lines at convenient points
 
 opt.list = true -- Show some invisible characters (tabs...
+opt.listchars = { tab = "│ " }
 
 opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
