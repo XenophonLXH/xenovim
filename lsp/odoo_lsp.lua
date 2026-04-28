@@ -2,11 +2,10 @@ return {
   cmd = { "odoo-lsp" },
   filetypes = { "python", "xml", "javascript" },
 
-  -- Neovim built-in LSP root resolver signature
   root_dir = function(bufnr, on_dir)
     local name = vim.api.nvim_buf_get_name(bufnr)
     if name == "" then return end
-    if name:match("^%w+://") then return end -- Oil and other URI-like buffers
+    if name:match("^%w+://") then return end
 
     local full = vim.fs.normalize(name)
 
@@ -26,7 +25,7 @@ return {
     if not inside then return end
 
     local start = vim.fs.dirname(full)
-    local marker = vim.fs.find({ ".git", "pyproject.toml", "setup.py", "odoo.conf" }, {
+    local marker = vim.fs.find({ ".odoo_lsp", ".odoo_lsp.json", ".git", "pyproject.toml", "setup.py", "odoo.conf" }, {
       upward = true,
       path = start,
     })[1]
