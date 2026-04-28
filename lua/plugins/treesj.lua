@@ -4,7 +4,7 @@ return     {
         {
             "<leader>m",
             "<CMD>TSJToggle<CR>",
-            desc = "Toggle Treesj",
+            desc = "Toggle split/join block",
         },
     },
     cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
