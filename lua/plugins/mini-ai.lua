@@ -1,11 +1,12 @@
-local gen_spec = require('mini.ai').gen_spec
 return {
     'echasnovski/mini.ai',
+    dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
     config = function()
+        local gen_spec = require('mini.ai').gen_spec
         require('mini.ai').setup({
             custom_textobjects = {
-            -- Function definition (needs treesitter queries with these captures)
-            F = gen_spec.treesitter({ a = '@function.outer', i = '@function.inner' }),
+                f = gen_spec.treesitter({ a = '@function.outer', i = '@function.inner' }),
+                c = gen_spec.treesitter({ a = '@class.outer', i = '@class.inner' }),
             },
             mappings = {
                 -- Main textobject prefixes
