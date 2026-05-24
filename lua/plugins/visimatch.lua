@@ -20,7 +20,7 @@ local opts = {
     -- * `true`: matches will never be case-sensitive
     -- * `false`/`{}`: matches will always be case-sensitive
     -- * a table of filetypes to use use case-insensitive matching for.
-    case_insensitive = { "markdown", "text", "help" },
+    -- case_insensitive = { "markdown", "text", "help" },
 }
 
 return {
