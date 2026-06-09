@@ -9,7 +9,7 @@ function _G.Runner()
         dap.continue()
     else
         local runner = vim.ui.select(
-            {'odoo', 'python'},
+            {'odoo', 'python', 'fastapi'},
             {
                 prompt = "What to run?",
                 format_item = function(runner)
@@ -29,6 +29,8 @@ function _G.runRunner(runner)
         _G.OdooRunner()
     elseif runner == 'python' then
         _G.PythonRunner()
+    elseif runner == 'fastapi' then
+        _G.FastAPIRunner()
     else
         print("Invalid option, doing nothing....")
     end
@@ -102,6 +104,34 @@ function _G.PythonRunner()
             local copy_args = config.args
             config.args = copy_args
             dap.run(config)
+        end
+    )
+end
+
+function _G.FastAPIRunner()
+    local configs = dap.configurations.python
+    local fastapi_configs = {}
+    for i = 1, #configs do
+        if configs[i].tag == "fastapi" then
+            table.insert(fastapi_configs, configs[i])
+        end
+    end
+
+    vim.ui.select(
+        fastapi_configs,
+        {
+            prompt = "Select config to run: ",
+            format_item = function(config)
+                return config.name
+            end
+        },
+        function(config)
+            if config == nil then
+                print("No config selected. Doing nothing")
+                return
+            end
+            dap.run(config)
+            require("dapui").open()
         end
     )
 end

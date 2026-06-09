@@ -19,6 +19,14 @@ dap.adapters.python = {
   args = { '-m', 'debugpy.adapter' },
 }
 
+dap.adapters["python-remote"] = function(callback, config)
+    callback({
+        type = "server",
+        host = config.connect.host,
+        port = config.connect.port,
+    })
+end
+
 dap.configurations.python = {
   {
     type = 'python',
@@ -147,5 +155,28 @@ dap.configurations.python = {
         pythonPath = function()
             return "/usr/bin/python3"
         end,
+    },
+    -- Attach to a debugpy process started externally (e.g. fastapi-debug.sh).
+    -- Start the server first, then :DapContinue to attach.
+    {
+        type = "python-remote",
+        request = "attach",
+        name = "Attach: FastAPI (debugpy)",
+        tag = "fastapi",
+        connect = {
+            host = "127.0.0.1",
+            port = function()
+                local port = vim.fn.input("debugpy port [5678]: ")
+                return tonumber(port) ~= 0 and tonumber(port) or 5678
+            end,
+        },
+        pathMappings = {
+            {
+                localRoot = function()
+                    return vim.fn.input("Local src dir: ", vim.fn.getcwd() .. "/src", "file")
+                end,
+                remoteRoot = ".",
+            },
+        },
     },
 }
