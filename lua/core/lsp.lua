@@ -8,6 +8,7 @@ vim.lsp.enable({
     'ruff',
     'rust_analyzer',
     'ts_ls',
+    'eslint_ls',
     'odoo_lsp'
 })
 
