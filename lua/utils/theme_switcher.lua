@@ -4,6 +4,19 @@ local THEME_FILE = vim.fn.stdpath('data') .. '/nvim_theme.txt'
 
 -- Common overrides applied to every theme
 local function post_common()
+    vim.api.nvim_set_hl(0, "Normal",      { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalNC",    { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "SignColumn",  { bg = "none" })
+    vim.api.nvim_set_hl(0, "LineNr",      { bg = "none" })
+    vim.api.nvim_set_hl(0, "LineNrAbove", { bg = "none" })
+    vim.api.nvim_set_hl(0, "LineNrBelow", { bg = "none" })
+    vim.api.nvim_set_hl(0, "FoldColumn",  { bg = "none" })
+    vim.api.nvim_set_hl(0, "TabLine",     { bg = "none" })
+    vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TabLineSel",  { bg = "none" })
+    vim.api.nvim_set_hl(0, "WinBar",      { bg = "none" })
+    vim.api.nvim_set_hl(0, "WinBarNC",    { bg = "none" })
     vim.cmd([[
     hi clear EndOfBuffer
     hi link EndOfBuffer NonText
@@ -36,10 +49,6 @@ local function post_common()
     hi DiagnosticVirtualTextOk       gui=ITALIC cterm=ITALIC
     hi DiagnosticVirtualTextTextWarn gui=ITALIC cterm=ITALIC
 
-    hi BufferLineFill           guibg=NONE
-    hi BufferLineBackground     guibg=NONE
-    hi BufferLineBufferVisible  guibg=NONE
-    hi BufferLineBufferSelected guibg=NONE
     ]])
     vim.cmd([[hi Cursor guibg=red]])
     vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
@@ -63,14 +72,6 @@ local function post_catppuccin()
     ]])
 end
 
-local function post_oxocarbon()
-    post_common()
-    -- oxocarbon doesn't support transparent natively
-    vim.api.nvim_set_hl(0, "Normal",       { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat",  { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalNC",     { bg = "none" })
-end
-
 -- Each entry:
 --   name:    colorscheme name for vim.cmd.colorscheme()
 --   plugin:  lazy.nvim plugin name for require('lazy').load()
@@ -80,7 +81,7 @@ M.themes = {
     { name = "catppuccin",  plugin = "catppuccin",       display = "Catppuccin Macchiato", post = post_catppuccin },
     { name = "tokyonight",  plugin = "tokyonight.nvim",  display = "Tokyo Night",          post = post_common },
     { name = "gruvbox",     plugin = "gruvbox.nvim",     display = "Gruvbox",              post = post_common },
-    { name = "oxocarbon",   plugin = "oxocarbon.nvim",   display = "Nyoom (Oxocarbon)",    post = post_oxocarbon },
+    { name = "oxocarbon",   plugin = "oxocarbon.nvim",   display = "Nyoom (Oxocarbon)",    post = post_common },
     { name = "onedark",     plugin = "onedarkpro.nvim",  display = "One Dark Pro",         post = post_common },
     { name = "vague",       plugin = "vague.nvim",       display = "Vague",                post = post_common },
     { name = "bamboo",      plugin = "bamboo.nvim",      display = "Bamboo",               post = post_common },
@@ -100,6 +101,8 @@ M.themes = {
     { name = "mellifluous",       plugin = "mellifluous.nvim",       display = "Mellifluous",       post = post_common },
     { name = "lucius",            plugin = "vim-lucius",             display = "Lucius",            post = post_common },
     { name = "kanagawa-paper",    plugin = "kanagawa-paper.nvim",    display = "Kanagawa Paper",    post = post_common },
+    { name = "oh-lucy",           plugin = "oh-lucy.nvim",           display = "Oh Lucy",           post = post_common },
+    { name = "oh-lucy-evening",   plugin = "oh-lucy.nvim",           display = "Oh Lucy Evening",   post = post_common },
 }
 
 M.apply = function(name)

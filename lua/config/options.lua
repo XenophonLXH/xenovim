@@ -52,6 +52,7 @@ vim.opt.updatetime = 50
 
 -- Bufferlne settings
 vim.opt.laststatus = 3
+vim.opt.cmdheight = 0
 
 -- only set clipboard if not in ssh, to make sure the OSC 52
 -- integration works automatically. Requires Neovim >= 0.10.0

@@ -3,7 +3,11 @@ return {
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
+        local highlights = setmetatable({}, {
+            __index = function(_, _) return { bg = "none" } end,
+        })
         require("bufferline").setup({
+            highlights = highlights,
             options = {
                 numbers = "ordinal",
                 diagnostics = "nvim_lsp",
