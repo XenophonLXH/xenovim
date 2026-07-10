@@ -61,6 +61,7 @@ return {
                 information = { 'underline' },
             },
             },
+            bufferline = true,
             cmp = true,
             telescope = true,
             nvimtree = true,

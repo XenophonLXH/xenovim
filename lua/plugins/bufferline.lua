@@ -3,9 +3,7 @@ return {
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-        local highlights = setmetatable({}, {
-            __index = function(_, _) return { bg = "none" } end,
-        })
+        local highlights = require("catppuccin.special.bufferline").get_theme()
         require("bufferline").setup({
             highlights = highlights,
             options = {
