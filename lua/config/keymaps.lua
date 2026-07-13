@@ -89,6 +89,9 @@ vim.keymap.set('n', '<A-l>', function() require("smart-splits").move_cursor_righ
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Page down (centred)" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Page up (centred)" })
 
+-- Diffview
+vim.keymap.set("n", "<F6>", "<cmd>lua _G.DiffviewToggle()<CR>", { desc = "Toggle diffview" })
+
 -- Debug
 vim.keymap.set("n", "<F2>", "<cmd>DapToggleBreakpoint<CR>",               { desc = "Toggle breakpoint" })
 vim.keymap.set("n", "<F4>", "<cmd>lua require('dap').restart()<CR>",      { desc = "Restart debugger" })

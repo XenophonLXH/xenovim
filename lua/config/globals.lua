@@ -140,3 +140,30 @@ function _G.Conditional()
     local condition = vim.fn.input("Condition: ", "")
     dap.toggle_breakpoint(condition)
 end
+
+local function diffview_is_open()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        local ft = vim.bo[buf].filetype
+        if ft == "DiffviewFiles" or ft == "DiffviewFileHistory" then
+            return true
+        end
+    end
+    return false
+end
+
+function _G.DiffviewToggle()
+    if diffview_is_open() then
+        vim.cmd("DiffviewClose")
+        return
+    end
+    local input = vim.fn.input("Diff (empty=remote, one ref, or ref1..ref2): ", "")
+    local parts = vim.split(vim.trim(input), "%s+")
+    if input == "" then
+        vim.cmd("DiffviewOpen @{u}")
+    elseif #parts == 1 then
+        vim.cmd("DiffviewOpen " .. parts[1])
+    else
+        vim.cmd("DiffviewOpen " .. parts[1] .. ".." .. parts[2])
+    end
+end
