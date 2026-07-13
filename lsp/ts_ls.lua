@@ -1,7 +1,14 @@
+local mason_ts = vim.fn.expand("~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib")
+
 return {
     cmd = {
         "typescript-language-server",
         "--stdio",
+    },
+    init_options = {
+        tsserver = {
+            path = mason_ts,
+        },
     },
     filetypes = {
         "javascript",
