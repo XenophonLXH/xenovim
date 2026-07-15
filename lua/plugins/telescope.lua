@@ -4,41 +4,18 @@ return {
     config = function()
         require('telescope').setup({
             defaults = {
+                layout_strategy = "horizontal",
                 layout_config = {
-                width = 0.9,
-                height = 200,
-                bottom_pane = {
-                    height = 25,
+                    horizontal = {
+                        prompt_position = "top",
+                        preview_width = 0.55,
+                        results_title = false,
+                    },
+                    width = 0.9,
+                    height = 0.85,
                     preview_cutoff = 120,
-                    prompt_position = "top"
                 },
-                center = {
-                    height = 0.4,
-                    preview_cutoff = 40,
-                    prompt_position = "top",
-                    width = 0.5
-                },
-                cursor = {
-                    height = 0.9,
-                    preview_cutoff = 40,
-                    width = 0.8
-                },
-                horizontal = {
-                    height = 0.9,
-                    preview_cutoff = 40,
-                    prompt_position = "bottom",
-                    width = 0.8
-                },
-                vertical = {
-                    anchor = "center",
-                    height = 0.99,
-                    preview_height = 0.65,
-                    preview_cutoff = 20,
-                    prompt_position = "top",
-                    width = 0.9
-                }
-                },
-                layout_strategy = "vertical",
+                sorting_strategy = "ascending",
                 file_ignore_patterns = {
                 "node_modules",
                 "*.po",
