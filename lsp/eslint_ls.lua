@@ -18,7 +18,7 @@ return {
                     },
                     workingDirectory = { directory = root },
                     packageManager = "pnpm",
-                    nodePath = vim.NIL,
+
                     experimental = { useFlatConfig = false },
                     validate = "on",
                     format = false,
