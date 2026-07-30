@@ -3,5 +3,6 @@ return {
     opts = {
         "debugpy",
         "typescript-language-server",
+        "terraform-ls",
     }
 }

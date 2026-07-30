@@ -9,7 +9,8 @@ vim.lsp.enable({
     'rust_analyzer',
     'ts_ls',
     'eslint_ls',
-    'odoo_lsp'
+    'terraform_ls',
+    -- 'odoo_lsp'
 })
 
 vim.diagnostic.config({
